@@ -64,3 +64,11 @@ h5 {
 .country:not(:hover) {
   opacity: 0.5; 
 }
+
+iframe{
+  position: fixed;
+  bottom:20px;
+  max-width: 18%;
+  left:20px;
+  
+}
