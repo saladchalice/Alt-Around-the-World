@@ -1,0 +1,57 @@
+html, body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Inter", sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+
+.text-container {
+    max-width: 100ch;
+}
+
+.text {
+    margin: 20px;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    max-width: 100%;
+}
+
+#left-side {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+/* lnos --------------------------------------------------------------------*/
+#lnos-container {
+    background-color: white; 
+    padding: 0px;
+    margin-top: auto;
+}   
+
+#lnos-chart {
+    overflow-x: hidden;
+}
+
+.hover {
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.country:hover ~ .country,
+.country:not(:hover) {
+    opacity: 0.5; 
+}
