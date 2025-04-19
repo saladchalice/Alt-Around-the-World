@@ -13,9 +13,15 @@ html, body {
   height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h6 {
   font-family: "Inter", sans-serif;
   margin: 20px;
+  padding: 0;
+}
+
+h5 {
+  font-family: "Inter", sans-serif;
+  margin: 5px;
   padding: 0;
 }
 

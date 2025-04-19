@@ -3,7 +3,8 @@ import React from 'react';
 const LeftSideContent = () => {
     return (
         <div id="left-side">
-            <h2>Long Night of Solace</h2>
+            <h2>Alt Around the World</h2>
+            <h5>Alternatively, "Long Night of Solace"</h5>
             <div className="text-container">
                 <p className="text">
                     for several years, i have been compiling <span id="emphasis">
