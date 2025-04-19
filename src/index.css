@@ -15,7 +15,8 @@ html, body {
 
 h1, h2, h3, h4, h6 {
   font-family: "Inter", sans-serif;
-  margin: 20px;
+  margin-top: 20px;
+  margin-left:20px;
   padding: 0;
 }
 
@@ -71,4 +72,8 @@ iframe{
   max-width: 18%;
   left:20px;
   
+}
+
+strong{
+  color:#415d9b;
 }
