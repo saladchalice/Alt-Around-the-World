@@ -70,7 +70,7 @@ const ChoroplethMap = () => {
                         <div style="color: #666; margin-top: 5px">
                             Songs:
                             <ul style="margin: 5px 0; padding-left: 15px; color: #333; font-size: 14px">
-                                ${countryData.songs.slice(0, 5).map(song => `<li>${song}</li>`).join('')}
+                                ${countryData.songs.slice(0, 15).map(song => `<li>${song}</li>`).join('')}
                             </ul>
                         </div>
                     `)
