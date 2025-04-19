@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Alt-Around-the-World/static/css/main.bc330f3c.css",
+    "main.js": "/Alt-Around-the-World/static/js/main.7f3f15c3.js",
+    "static/js/453.9d4b5ab9.chunk.js": "/Alt-Around-the-World/static/js/453.9d4b5ab9.chunk.js",
+    "static/media/logo.svg": "/Alt-Around-the-World/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Alt-Around-the-World/index.html",
+    "main.bc330f3c.css.map": "/Alt-Around-the-World/static/css/main.bc330f3c.css.map",
+    "main.7f3f15c3.js.map": "/Alt-Around-the-World/static/js/main.7f3f15c3.js.map",
+    "453.9d4b5ab9.chunk.js.map": "/Alt-Around-the-World/static/js/453.9d4b5ab9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc330f3c.css",
+    "static/js/main.7f3f15c3.js"
+  ]
+}
