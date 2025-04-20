@@ -8,12 +8,12 @@ const LeftSideContent = () => {
             <div className="text-container">
                 <p className="text">
                     for several years, i have been compiling <span id="emphasis">
-                    a curated list of indie/alternative music from <strong>every country/territory in the world</strong></span>, 
-                    with an emphasis on rock subcultures and a de-emphasis on strictly anglophone countries.
+                    a curated list of indie/alternative rock music from <strong>every country/territory in the world</strong></span>, 
+                    with a de-emphasis on large majority-anglophone countries (USA, UK, Australia, NZ).
                     So far I'm up to 95!
                 </p>
                 <p className="text">
-                    In the making of this playlist, I've gotten to know and appreciate indie and alternative artists from
+                    In the making of this playlist, I've gotten to listen to indie and alternative artists from
                      music cultures around the world that I would've never been able to encounter otherwise.
                     Some highlights for me are <strong>Singapore, Kenya, the Faroe Islands, and Peru!</strong>
                 </p>
