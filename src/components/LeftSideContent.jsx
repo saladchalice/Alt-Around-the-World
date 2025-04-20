@@ -7,7 +7,7 @@ const LeftSideContent = () => {
             <h5>Alternatively, "Long Night of Solace"</h5>
             <div className="text-container">
                 <p className="text">
-                    for several years, i have been compiling <span id="emphasis">
+                    For several years, I have been compiling <span id="emphasis">
                     a curated list of indie/alternative rock music from <strong>every country/territory in the world</strong></span>, 
                     with a de-emphasis on large majority-anglophone countries (USA, UK, Australia, NZ).
                     So far I'm up to 95!
