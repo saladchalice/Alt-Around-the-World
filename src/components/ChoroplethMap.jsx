@@ -7,12 +7,13 @@ const ChoroplethMap = () => {
 
     useEffect(() => {
         const loadData = async () => {
-            const data = await d3.csv(process.env.PUBLIC_URL + '/data/lnos.csv', (row) => ({
+            const data = await d3.csv(process.env.PUBLIC_URL + '/data/lnos2.csv', (row) => ({
                 country: row.country,
                 genre: row.genre,
                 artist: row.artist,
                 songName: row["song name"],
-                rating: Number(row.rating)
+                album_url: row.album_url,
+                preview_url: row.preview_url
             }));
             console.log(data);
             createChoropleth(data);
@@ -40,59 +41,19 @@ const ChoroplethMap = () => {
                     .join(' ')
             );
 
-            const tooltip = d3.select(tooltipRef.current)
-                .style("opacity", 0)
-                .style("position", "absolute")
-                .style("background", "white")
-                .style("border", "1px solid rgba(0,0,0,0.1)")
-                .style("border-radius", "6px")
-                .style("padding", "10px")
-                .style("box-shadow", "2px 2px 6px rgba(0, 0, 0, 0.1)")
-                .style("font-family", "Inter")
-                .style("font-size", "12px")
-                .style("line-height", "1.4")
-                .style("pointer-events", "none")
-                .style("z-index", "1000");
-
-            const mouseover = function (event, d) {
-                d3.selectAll(".country").style("opacity", 0.75);
-                d3.select(this).style("stroke-width", .6).style("stroke", "black").style("opacity", 1).classed('hover', true);
-
-                const countryData = countryStats.get(d.properties.ADMIN);
-                if (countryData) {
-                    tooltip.html(`
-                        <div style="font-weight: bold; color: ${colorScale(countryData.count)}; margin-bottom: 5px">
-                            ${d.properties.ADMIN}
-                        </div>
-                        <div style="color: #666">
-                            Songs Count: <span style="color: #333; font-weight: 600;">${countryData.count}</span>
-                        </div>
-                        <div style="color: #666; margin-top: 5px">
-                            Songs:
-                            <ul style="margin: 5px 0; padding-left: 15px; color: #333; font-size: 14px">
-                                ${countryData.songs.slice(0, 15).map(song => `<li>${song}</li>`).join('')}
-                            </ul>
-                        </div>
-                    `)
-                        .style("opacity", 1)
-                        .style("left", Math.max(event.pageX + 10, 10) + "px")
-                        .style("top", Math.max(event.pageY - 10, 10) + "px");
-                } else {
-                    tooltip.html(`
-                        <div style="font-weight: bold; margin-bottom: 5px">${d.properties.ADMIN}</div>
-                        <div style="color: #666">No songs recorded</div>
-                    `)
-                        .style("opacity", 1)
-                        .style("left", Math.max(event.pageX + 10, 10) + "px")
-                        .style("top", Math.max(event.pageY - 10, 10) + "px");
-                }
-            };
-
-            const mouseleave = function () {
-                tooltip.style("opacity", 0);
-                d3.selectAll(".country").style("opacity", 1).style("stroke", "#282828").style("stroke-width", .2);
-                d3.select(this).style("stroke", "black").classed('hover', false);
-            };
+            // const tooltip = d3.select(tooltipRef.current)
+            //     .style("opacity", 0)
+            //     .style("position", "absolute")
+            //     .style("background", "white")
+            //     .style("border", "1px solid rgba(0,0,0,0.1)")
+            //     .style("border-radius", "6px")
+            //     .style("padding", "10px")
+            //     .style("box-shadow", "2px 2px 6px rgba(0, 0, 0, 0.1)")
+            //     .style("font-family", "Inter")
+            //     .style("font-size", "12px")
+            //     .style("line-height", "1.4")
+            //     .style("pointer-events", "none")
+            //     .style("z-index", "1000");
 
             const world = await d3.json(process.env.PUBLIC_URL+'/data/countries.geojson');
 
@@ -110,6 +71,77 @@ const ChoroplethMap = () => {
                 .fitExtent([[0, 0], [width, height]], world);
 
             const path = d3.geoPath().projection(projection);
+            //calculate centroids for each country
+            // world.features.forEach((feature) => {
+            //     const centroid = path.centroid(feature); // Calculate centroid for each feature
+            // });
+            
+
+            // when hover, show round tooltip with country name and number of songs. when clicking the round button, expand to radial menu. 
+            const tooltip = d3.select(tooltipRef.current)
+                .style("opacity", 0)
+                .style("position", "absolute")
+                .style("background", "white")
+                .style("border", "1px solid rgba(0,0,0,0.1)")
+                .style("border-radius", "6px")
+                .style("padding", "10px")
+                .style("box-shadow", "2px 2px 6px rgba(0, 0, 0, 0.1)")
+                .style("font-family", "Inter")
+                .style("font-size", "12px")
+                .style("line-height", "1.4")
+                .style("pointer-events", "none")
+                .style("z-index", "1000");
+            ;
+
+            // mouse events --------------------------------------------------------------------------------------------------------------
+            const mouseover = function (event, d) {
+                d3.selectAll(".country").style("opacity", 0.75);
+                d3.select(this)
+                    .style("stroke-width", 0.6)
+                    .style("stroke", "black")
+                    .style("opacity", 1)
+                    .classed("hover", true);
+            
+                const centroid = path.centroid(d); // Calculate centroid of the country
+                const transform = d3.zoomTransform(g.node()); // Get the current zoom transform
+                
+                const transformedX = transform.applyX(centroid[0]); // Apply zoom translation to X
+                const transformedY = transform.applyY(centroid[1]); // Apply zoom translation to Y
+            
+                const svgBounds = d3.select(svgRef.current).node().getBoundingClientRect(); // SVG's position
+            
+                const countryData = countryStats.get(d.properties.ADMIN);
+                if (countryData) {
+                    tooltip.html(`
+                        <div style="font-weight: bold; color: ${colorScale(countryData.count)}; margin-bottom: 5px">
+                            ${d.properties.ADMIN}
+                        </div>
+                        <div style="color: #666">
+                            Songs Count: <span style="color: #333; font-weight: 600;">${countryData.count}</span>
+                        </div>
+                    `)
+                    .style("opacity", 1)
+                    .style("left", `${transformedX + svgBounds.left}px`) // Adjust for zoom and SVG position
+                    .style("top", `${transformedY + svgBounds.top}px`); // Adjust for zoom and SVG position
+                } else {
+                    tooltip.html(`
+                        <div style="font-weight: bold; margin-bottom: 5px">${d.properties.ADMIN}</div>
+                        <div style="color: #666">No songs recorded</div>
+                    `)
+                    .style("opacity", 1)
+                    .style("left", `${transformedX + svgBounds.left}px`) // Adjust for zoom and SVG position
+                    .style("top", `${transformedY + svgBounds.top}px`); // Adjust for zoom and SVG position
+                }
+            };
+            
+
+            const mouseleave = function () {
+                tooltip.style("opacity", 0);
+                d3.selectAll(".country").style("opacity", 1).style("stroke", "#282828").style("stroke-width", .2);
+                d3.select(this).style("stroke", "black").classed('hover', false);
+            };
+
+            // set up map --------------------------------------------------------------------------------------------------------------
 
             const maxCount = d3.max(Array.from(countryStats.values()), d => d.count) || 1;
             const colorScale = d3.scaleSequential(d3.interpolateHcl("#AFC6E9", "#08142E"))
