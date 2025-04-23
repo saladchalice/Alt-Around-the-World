@@ -77,3 +77,19 @@ iframe{
 strong{
   color:#415d9b;
 }
+
+/* radial menu ---------------------------------------------------------------*/
+.song-container {
+  padding: 5px;
+  border-radius: 8px;
+  background-color: transparent;
+  width: 300px;
+  margin: 10px;
+}
+
+.url-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+

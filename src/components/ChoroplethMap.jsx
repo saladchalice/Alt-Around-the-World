@@ -143,16 +143,15 @@ const ChoroplethMap = () => {
             const radialMenu = d3.select(menuRef.current)
             .style("opacity", 0)
             .style("position", "absolute")
-            .style("background", "white")   
-            .style("border", "1px solid rgba(0,0,0,0.1)")
+            .style("background", "transparent")   
             .style("border-radius", "6px")
             .style("padding", "10px")
-            .style("box-shadow", "2px 2px 6px rgba(0, 0, 0, 0.1)")
             .style("font-family", "Inter")
             .style("font-size", "12px")
             .style("line-height", "1.4")
             .style("pointer-events", "auto")
-            .style("z-index", "1000");
+            .style("z-index", "1000")
+
             ;
 
             // on click, show a radial menu with the songs in the country. ------------------------------------------------------------------
@@ -178,9 +177,19 @@ const ChoroplethMap = () => {
                 const transformedX = transform.applyX(centroid[0]); // Apply zoom translation to X
                 const transformedY = transform.applyY(centroid[1]); // Apply zoom translation to Y
 
+                const svgBounds = d3.select(svgRef.current).node().getBoundingClientRect(); // SVG's position
+
+                // Store radial menu's initial position in global variables
+                const menuX = transformedX + svgBounds.left;
+                const menuY = transformedY + svgBounds.top;
+
+
+
 
                 // define radial menu depending on if data exists or not
                 if (countryData) {
+                    tooltip.style("opacity", 0);
+
                     // get song names, album urls, and preview urls
                     const songs = countryData.songs;
                     const albumUrls = countryData.album_urls;
@@ -190,44 +199,55 @@ const ChoroplethMap = () => {
                     const baseRadius = 50; // Start radius
                     const radiusIncrement = 30; // Space between layers
                     const angleIncrement = (2 * Math.PI) / countryData.count; // Angle between each item
-                    radialMenu.selectAll('div')
-                        .data(countryData) // can't just put countryData, need to put each of the songs and urls
-                        .enter()
-                        .append('div')
-                        .attr('class', 'radial-menu-item')
-                        .style('position', 'absolute')
-                        .style('transform', (d, i) => {
-                            const radius = baseRadius + (i * radiusIncrement); // Spiral outwards
-                            const angle = i * angleIncrement; // Position item by angle
-                            const x = Math.cos(angle) * radius; // X coordinate
-                            const y = Math.sin(angle) * radius; // Y coordinate
-                            return `translate(${x}px, ${y}px)`; // Position in spiral
-                        })
-                        .style('width', '40px')
-                        .style('height', '40px')
-                        .style('border-radius', '50%')
-                        .style('background', '#ddd')
-                        .style('display', 'flex')
-                        .style('align-items', 'center')
-                        .style('justify-content', 'center')
-                        .text(d => d.label) // Add text
-                        .on('click', d => alert(`Clicked ${d.label}`)); // Add click behavior
-                }
-                else{
-                    radialMenu.html(`
-                        <div style="font-weight: bold; margin-bottom: 5px">${d.properties.ADMIN}</div>
-                        <div style="color: #666">No songs recorded</div>
-                    `)
-                    .style("opacity", 1)
+
+
+                    // functions for displaying album art and audio previews
+                    const displayAlbumImage = (albumUrl) => {
+                        if (!albumUrl) return `<img src="${process.env.PUBLIC_URL}/images/nopreview.png" alt="No Preview Available" style="width: 50px; height: auto; border-radius: 50%; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);>`;
+                        return `<img src="${albumUrl}" alt="Album Art" style="width: 50px; height: auto; border-radius: 50%; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);">`;
+                    };
+
+                    const displayAudioPreview = (previewUrl) => {
+                        return `<audio controls style="width: 250px padding:5px;">
+                                    <source src="${previewUrl}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>`;
+                    };                    
+                    
+
+                    // populate radialMenu with song names and urls
+                    if (countryData) {
+                        radialMenu.selectAll('div')
+                            .data(countryData.songs)
+                            .enter()
+                            .append('div')
+                            .attr('class', 'song-item')
+                            .style('display', 'flex')
+                            .style('flex-direction', 'column')
+                            .style('align-items', 'center')
+                            .style('margin', '10px')
+                            .html((d, i) => {
+                                const albumUrl = countryData.album_urls[i]; // Get album URL
+                                const previewUrl = countryData.preview_urls[i]; // Get preview URL
+                                return `
+                                    <div class="song-container">
+                                        <div class="url-container">
+                                            ${displayAlbumImage(albumUrl)}
+                                            ${displayAudioPreview(previewUrl)}
+                                        </div>
+                                        <div style="margin-top: 5px; font-size: 14px; color: black;">${d}</div>
+                                    </div>
+                                    
+                                `;
+                            });
+                    }
                 }
 
                 // Show the radial menu
                 radialMenu
                 .style('opacity', 1)
-                .style('left', `${transformedX - menuWidth / 2}px`) // Center the menu horizontally
-                .style('top', `${transformedY - menuHeight / 2}px`); // Center the menu vertically
-
-
+                .style('left', `${menuX}px`) // Fixed initial position
+                .style('top', `${menuY}px`); // Fixed initial position
             }
             
 
