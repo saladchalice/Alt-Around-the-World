@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import RadialMenu from './RadialMenu';
 
-const ChoroplethMap = () => {
+const ChoroplethMap =  ({ onCountrySelect, onSongSelect  }) => {
     const svgRef = useRef();
     const tooltipRef = useRef();
     const [menuState, setMenuState] = useState({
@@ -80,6 +80,11 @@ const ChoroplethMap = () => {
                 .style("z-index", "1000");
 
             const mouseover = function (event, d) {
+                //log countryname
+                const countryName = d.properties.ADMIN;
+                onCountrySelect(countryName);
+
+
                 d3.selectAll(".country").style("opacity", 0.75);
                 d3.select(this)
                     .style("stroke-width", 0.6)
@@ -171,6 +176,7 @@ const ChoroplethMap = () => {
                     countryData={menuState.countryData} 
                     position={menuState.position}
                     onClose={closeMenu}
+                    onSongSelect={onSongSelect}
                 />
             )}
         </div>

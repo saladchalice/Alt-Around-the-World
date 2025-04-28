@@ -1,8 +1,10 @@
 // RadialMenu.js
 import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
+import '../index.scss';
+import PropTypes from 'prop-types';
 
-const RadialMenu = ({ countryData, position, onClose }) => {
+const RadialMenu = ({ countryData, position, onClose, onSongSelect }) => {
     const menuRef = useRef();
     const [selectedIndex, setSelectedIndex] = useState(0);
     const audioRef = useRef(null);
@@ -55,14 +57,15 @@ const RadialMenu = ({ countryData, position, onClose }) => {
         
         // Stop current playback
         if (audioRef.current) {
-            audioRef.current.pause();
-            setIsPlaying(false);
+          audioRef.current.pause();
+          setIsPlaying(false);
         }
-
+      
         // Calculate new index with wrap-around
         const newIndex = (selectedIndex + direction + countryData.count) % countryData.count;
         setSelectedIndex(newIndex);
-    };
+        handleSongSelect(newIndex); // Add this line to notify parent of new selection
+      };
 
     const togglePlayback = () => {
         if (!countryData || !countryData.preview_urls[selectedIndex]) return;
@@ -87,6 +90,16 @@ const RadialMenu = ({ countryData, position, onClose }) => {
         }
     };
 
+    const handleSongSelect = (index) => {
+        if (!countryData || !onSongSelect) return; // Add this check
+        
+        onSongSelect({
+          song: countryData.songs[index],
+          artist: countryData.artist, // or countryData.artists[index]
+          albumUrl: countryData.album_urls[index]
+        });
+      };
+
     useEffect(() => {
         if (!countryData) return;
 
@@ -97,13 +110,14 @@ const RadialMenu = ({ countryData, position, onClose }) => {
         const menuWidth = 200;
         const menuHeight = 200;
         const count = countryData.count;
-        const baseRadius = 100;
+        const baseRadius = 50 + (count - 1) * 2; // Adjust radius based on count
         const angleIncrement = (2 * Math.PI) / count;
         
         // Icon sizing
         const maxSize = 80;
         const minSize = 50;
         const iconSize = Math.max(minSize, maxSize - count * 2);
+        
 
         // Helper function to create album image HTML
         const displayAlbumImage = (albumUrl, previewUrl, size, isSelected) => {
@@ -173,8 +187,9 @@ const RadialMenu = ({ countryData, position, onClose }) => {
             .on('click', (event, d) => {
                 const index = parseInt(event.currentTarget.getAttribute('data-index'));
                 setSelectedIndex(index);
-                togglePlayback();
-            });
+                handleSongSelect(index); // Notify parent component of selection
+                togglePlayback(); // Keep existing playback behavior
+              });
 
         // Show the menu
         radialMenu
@@ -222,3 +237,10 @@ const RadialMenu = ({ countryData, position, onClose }) => {
 };
 
 export default RadialMenu;
+
+RadialMenu.propTypes = {
+    countryData: PropTypes.object,
+    position: PropTypes.object.isRequired,
+    onClose: PropTypes.func.isRequired,
+    onSongSelect: PropTypes.func.isRequired
+  };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LeftSideContent = () => {
+const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
     return (
         <div id="left-side">
             <h2>Alt Around the World</h2>
@@ -18,9 +18,25 @@ const LeftSideContent = () => {
                     Some highlights for me are <strong>Singapore, Kenya, the Faroe Islands, and Peru!</strong>
                 </p>
             </div>
-            <div>
-
-
+{/* New selection display */}
+            <div className="selection-display">
+                {selectedCountry && (
+                <div className="country-selection">
+                    <h3>Currently Exploring: {selectedCountry}</h3>
+                    {selectedSong && (
+                    <div className="song-selection">
+                        <p>Now Playing: <strong>{selectedSong.song}</strong></p>
+                        {selectedSong.albumUrl && (
+                        <img 
+                            src={selectedSong.albumUrl} 
+                            alt="Album cover" 
+                            className="album-thumbnail"
+                        />
+                        )}
+                    </div>
+                    )}
+                </div>
+                )}
             </div>
         </div>
     );
