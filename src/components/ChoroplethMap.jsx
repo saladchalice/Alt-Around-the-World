@@ -1,10 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
+import RadialMenu from './RadialMenu';
 
 const ChoroplethMap = () => {
     const svgRef = useRef();
     const tooltipRef = useRef();
-    const menuRef = useRef();
+    const [menuState, setMenuState] = useState({
+        show: false,
+        countryData: null,
+        position: { x: 0, y: 0 }
+    });
 
     useEffect(() => {
         const loadData = async () => {
@@ -16,7 +21,6 @@ const ChoroplethMap = () => {
                 album_url: row.album_url,
                 preview_url: row.preview_url
             }));
-            // console.log(data);
             createChoropleth(data);
         };
 
@@ -43,21 +47,6 @@ const ChoroplethMap = () => {
                             : word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
                     .join(' ')
             );
-            console.log(countryStats);
-
-            // const tooltip = d3.select(tooltipRef.current)
-            //     .style("opacity", 0)
-            //     .style("position", "absolute")
-            //     .style("background", "white")
-            //     .style("border", "1px solid rgba(0,0,0,0.1)")
-            //     .style("border-radius", "6px")
-            //     .style("padding", "10px")
-            //     .style("box-shadow", "2px 2px 6px rgba(0, 0, 0, 0.1)")
-            //     .style("font-family", "Inter")
-            //     .style("font-size", "12px")
-            //     .style("line-height", "1.4")
-            //     .style("pointer-events", "none")
-            //     .style("z-index", "1000");
 
             const world = await d3.json(process.env.PUBLIC_URL+'/data/countries.geojson');
 
@@ -74,14 +63,8 @@ const ChoroplethMap = () => {
             const projection = d3.geoNaturalEarth1()
                 .fitExtent([[0, 0], [width, height]], world);
 
-            const path = d3.geoPath().projection(projection);
-            //calculate centroids for each country
-            // world.features.forEach((feature) => {
-            //     const centroid = path.centroid(feature); // Calculate centroid for each feature
-            // });
-            
+            const path = d3.geoPath().projection(projection);          
 
-            // when hover, show round tooltip with country name and number of songs. when clicking the round button, expand to radial menu. 
             const tooltip = d3.select(tooltipRef.current)
                 .style("opacity", 0)
                 .style("position", "absolute")
@@ -95,9 +78,7 @@ const ChoroplethMap = () => {
                 .style("line-height", "1.4")
                 .style("pointer-events", "none")
                 .style("z-index", "1000");
-            ;
 
-            // mouse events --------------------------------------------------------------------------------------------------------------
             const mouseover = function (event, d) {
                 d3.selectAll(".country").style("opacity", 0.75);
                 d3.select(this)
@@ -105,160 +86,37 @@ const ChoroplethMap = () => {
                     .style("stroke", "black")
                     .style("opacity", 1)
                     .classed("hover", true);
-            
-                const centroid = path.centroid(d); // Calculate centroid of the country
-                const transform = d3.zoomTransform(g.node()); // Get the current zoom transform
+
+                event.stopPropagation();
                 
-                const transformedX = transform.applyX(centroid[0]); // Apply zoom translation to X
-                const transformedY = transform.applyY(centroid[1]); // Apply zoom translation to Y
-            
-                const svgBounds = d3.select(svgRef.current).node().getBoundingClientRect(); // SVG's position
-            
-                const countryData = countryStats.get(d.properties.ADMIN);
+                const countryData = countryStats.get(d.properties.ADMIN);                
+                const centroid = path.centroid(d);
+                const transform = d3.zoomTransform(g.node());
+        
+                const transformedX = transform.applyX(centroid[0]);
+                const transformedY = transform.applyY(centroid[1]);
+
+                const svgBounds = d3.select(svgRef.current).node().getBoundingClientRect();
+
                 if (countryData) {
-                    tooltip.html(`
-                        <div style="font-weight: bold; color: ${colorScale(countryData.count)}; margin-bottom: 5px">
-                            ${d.properties.ADMIN}
-                        </div>
-                        <div style="color: #666">
-                            Songs Count: <span style="color: #333; font-weight: 600;">${countryData.count}</span>
-                        </div>
-                    `)
-                    .style("opacity", 1)
-                    .style("left", `${transformedX + svgBounds.left}px`) // Adjust for zoom and SVG position
-                    .style("top", `${transformedY + svgBounds.top}px`); // Adjust for zoom and SVG position
-                } else {
-                    tooltip.html(`
-                        <div style="font-weight: bold; margin-bottom: 5px">${d.properties.ADMIN}</div>
-                        <div style="color: #666">No songs recorded</div>
-                    `)
-                    .style("opacity", 1)
-                    .style("left", `${transformedX + svgBounds.left}px`) // Adjust for zoom and SVG position
-                    .style("top", `${transformedY + svgBounds.top}px`); // Adjust for zoom and SVG position
+                    tooltip.style("opacity", 0);
+                    
+                    setMenuState({
+                        show: true,
+                        countryData: countryData,
+                        position: {
+                            x: transformedX + svgBounds.left,
+                            y: transformedY + svgBounds.top
+                        }
+                    });
                 }
             };
 
-
-            // establish radial menu
-            const radialMenu = d3.select(menuRef.current)
-            .style("opacity", 0)
-            .style("position", "absolute")
-            .style("background", "transparent")   
-            .style("border-radius", "6px")
-            .style("padding", "10px")
-            .style("font-family", "Inter")
-            .style("font-size", "12px")
-            .style("line-height", "1.4")
-            .style("pointer-events", "auto")
-            .style("z-index", "1000")
-
-            ;
-
-            // on click, show a radial menu with the songs in the country. ------------------------------------------------------------------
-            const click = function (event, d) {
-                // Clear any previous menu items
-                radialMenu.selectAll('*').remove();
-
-                // Prevent zoom from interfering
-                event.stopPropagation(); 
-                console.log(d.properties.ADMIN);
-
-                // the country data is the data for the country that was clicked on, retrived from the countryStats map
-                const countryData = countryStats.get(d.properties.ADMIN);                
-
-                // define radial menu size
-                const menuWidth = 200;
-                const menuHeight = 200; 
-
-                //calculate centroid for menu positioning
-                const centroid = path.centroid(d); // Calculate centroid of the country
-                const transform = d3.zoomTransform(g.node()); // Get the current zoom transform
-        
-                const transformedX = transform.applyX(centroid[0]); // Apply zoom translation to X
-                const transformedY = transform.applyY(centroid[1]); // Apply zoom translation to Y
-
-                const svgBounds = d3.select(svgRef.current).node().getBoundingClientRect(); // SVG's position
-
-                // Store radial menu's initial position in global variables
-                const menuX = transformedX + svgBounds.left;
-                const menuY = transformedY + svgBounds.top;
-
-
-
-
-                // define radial menu depending on if data exists or not
-                if (countryData) {
-                    tooltip.style("opacity", 0);
-
-                    // get song names, album urls, and preview urls
-                    const songs = countryData.songs;
-                    const albumUrls = countryData.album_urls;
-                    const previewUrls = countryData.preview_urls;
-
-                    // Define radius increments and angle spacing
-                    const baseRadius = 50; // Start radius
-                    const radiusIncrement = 30; // Space between layers
-                    const angleIncrement = (2 * Math.PI) / countryData.count; // Angle between each item
-
-
-                    // functions for displaying album art and audio previews
-                    const displayAlbumImage = (albumUrl) => {
-                        if (!albumUrl) return `<img src="${process.env.PUBLIC_URL}/images/nopreview.png" alt="No Preview Available" style="width: 50px; height: auto; border-radius: 50%; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);>`;
-                        return `<img src="${albumUrl}" alt="Album Art" style="width: 50px; height: auto; border-radius: 50%; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);">`;
-                    };
-
-                    const displayAudioPreview = (previewUrl) => {
-                        return `<audio controls style="width: 250px padding:5px;">
-                                    <source src="${previewUrl}" type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio>`;
-                    };                    
-                    
-
-                    // populate radialMenu with song names and urls
-                    if (countryData) {
-                        radialMenu.selectAll('div')
-                            .data(countryData.songs)
-                            .enter()
-                            .append('div')
-                            .attr('class', 'song-item')
-                            .style('display', 'flex')
-                            .style('flex-direction', 'column')
-                            .style('align-items', 'center')
-                            .style('margin', '10px')
-                            .html((d, i) => {
-                                const albumUrl = countryData.album_urls[i]; // Get album URL
-                                const previewUrl = countryData.preview_urls[i]; // Get preview URL
-                                return `
-                                    <div class="song-container">
-                                        <div class="url-container">
-                                            ${displayAlbumImage(albumUrl)}
-                                            ${displayAudioPreview(previewUrl)}
-                                        </div>
-                                        <div style="margin-top: 5px; font-size: 14px; color: black;">${d}</div>
-                                    </div>
-                                    
-                                `;
-                            });
-                    }
-                }
-
-                // Show the radial menu
-                radialMenu
-                .style('opacity', 1)
-                .style('left', `${menuX}px`) // Fixed initial position
-                .style('top', `${menuY}px`); // Fixed initial position
-            }
-            
-
-            // on leave, hide the tooltip and radial menu ----------------------------------------------------------------------------
             const mouseleave = function () {
                 tooltip.style("opacity", 0);
                 d3.selectAll(".country").style("opacity", 1).style("stroke", "#282828").style("stroke-width", .2);
                 d3.select(this).style("stroke", "black").classed('hover', false);
             };
-
-            // set up map --------------------------------------------------------------------------------------------------------------
 
             const maxCount = d3.max(Array.from(countryStats.values()), d => d.count) || 1;
             const colorScale = d3.scaleSequential(d3.interpolateHcl("#AFC6E9", "#08142E"))
@@ -281,8 +139,7 @@ const ChoroplethMap = () => {
                 .attr('stroke-width', 0.2)
                 .attr('class', 'country')
                 .on("mouseover", mouseover)
-                .on("mouseleave", mouseleave)
-                .on("click", click);
+                .on("mouseleave", mouseleave);
 
             const defaultScale = 1.25;
             const tx = width / 2;
@@ -301,11 +158,21 @@ const ChoroplethMap = () => {
         loadData();
     }, []);
 
+    const closeMenu = () => {
+        setMenuState(prev => ({ ...prev, show: false }));
+    };
+
     return (
         <div>
             <div ref={tooltipRef} className="tooltip"></div>
             <svg ref={svgRef}></svg>
-            <div ref={menuRef} className="radial-menu"></div>
+            {menuState.show && (
+                <RadialMenu 
+                    countryData={menuState.countryData} 
+                    position={menuState.position}
+                    onClose={closeMenu}
+                />
+            )}
         </div>
     );
 };

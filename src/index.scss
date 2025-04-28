@@ -79,12 +79,22 @@ strong{
 }
 
 /* radial menu ---------------------------------------------------------------*/
+
+           $li: 9; /* [1] */
+    $icon-size: 150px; /* [2] */
+    $menu-size: 300px / 2; /* [3] */
+    $unit-size: 45px;  /* [4] */
+$menu-position: (($menu-size * 2) - $icon-size) / -2;
+       $offset: 100px; /* [5] */
+          $deg: 360deg / $li; /* [6] */
+          
 .song-container {
+  position: absolute;
   padding: 5px;
   border-radius: 8px;
   background-color: transparent;
   width: 300px;
-  margin: 10px;
+  margin: 5px;
 }
 
 .url-container{
@@ -93,3 +103,6 @@ strong{
   gap: 10px;
 }
 
+.song-container {
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
