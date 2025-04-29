@@ -1,0 +1,58 @@
+name: Update Deezer Data and Deploy React App
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight
+  workflow_dispatch:  # Allows manual triggering of the workflow
+
+jobs:
+  update_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install requests pandas rapidfuzz
+
+      - name: Run data fetch script
+        run: |
+          cd python-scripts
+          python fetch_deezer_data.py
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git diff --quiet || git add public/data/lnos2.csv
+          git diff --cached --quiet || git commit -m "Update Deezer data"
+          git push
+
+      # Add React Build Deployment steps below
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Set your required Node.js version
+
+      - name: Install React app dependencies
+        run: |
+          npm install  # Install dependencies for your React app
+
+      - name: Build React app
+        run: |
+          npm run build  # This will create a production build of your React app
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # The branch to deploy the build (it will deploy to the gh-pages branch)
+          folder: build     # The folder containing the built React app (default is `build`)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # This is necessary for authentication with GitHub
