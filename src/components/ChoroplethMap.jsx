@@ -179,6 +179,25 @@ const ChoroplethMap =  ({ onCountrySelect, onSongSelect  }) => {
                     onSongSelect={onSongSelect}
                 />
             )}
+            <div 
+            style={{
+                position: 'absolute',
+                bottom: '0px', // Slight padding from the bottom of the container
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: '99%', // Matches the width of the parent container
+                maxWidth: '80vw', // Ensures it doesn't exceed the SVG width
+                backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                color: 'white',
+                textAlign: 'center',
+                padding: '10px',
+                fontSize: '14px',
+                fontFamily: 'Arial, sans-serif',
+                zIndex: 1000
+            }}
+        >
+            Hover to select a country, use arrow keys to select a song, press space to play the song, and escape to exit the menu.
+        </div>
         </div>
     );
 };

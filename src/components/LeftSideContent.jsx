@@ -38,6 +38,11 @@ const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
                 </div>
                 )}
             </div>
+            <div>
+                    <p className="disclaimer">This website is intended solely for the promotion and discovery of musical artists. All music previews, album artwork, and 
+                        related metadata are provided through the iTunes Search API, owned and operated by Apple Inc. 
+                        This site is not affiliated with or endorsed by Apple Inc. or iTunes. All rights to the content displayed belong to their respective owners.</p>
+                </div>
         </div>
     );
 };

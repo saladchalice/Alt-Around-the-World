@@ -107,8 +107,8 @@ const RadialMenu = ({ countryData, position, onClose, onSongSelect }) => {
         radialMenu.selectAll('*').remove();
 
         // Menu dimensions and calculations
-        const menuWidth = 200;
-        const menuHeight = 200;
+        const menuWidth = 100;
+        const menuHeight = 100;
         const count = countryData.count;
         const baseRadius = 50 + (count - 1) * 2; // Adjust radius based on count
         const angleIncrement = (2 * Math.PI) / count;
@@ -192,9 +192,29 @@ const RadialMenu = ({ countryData, position, onClose, onSongSelect }) => {
               });
 
         // Show the menu
+        // Adjust position so menu stays within the viewport
+        let x = position.x;
+        let y = position.y;
+
+        // Prevent right overflow
+        if (x + menuWidth > window.innerWidth) {
+            x = window.innerWidth - menuWidth - 10; // 10px padding
+        }
+
+        // Prevent bottom overflow
+        if (y + menuHeight > window.innerHeight) {
+            y = window.innerHeight - menuHeight - 10;
+        }
+
+        // Prevent left overflow
+        if (x < 0) x = 10;
+
+        // Prevent top overflow
+        if (y < 0) y = 10;
+
         radialMenu
-            .style('left', `${position.x}px`)
-            .style('top', `${position.y}px`)
+            .style('left', `${x}px`)
+            .style('top', `${y}px`)
             .transition()
             .duration(300)
             .style('opacity', 1);
@@ -224,7 +244,7 @@ const RadialMenu = ({ countryData, position, onClose, onSongSelect }) => {
                 opacity: 0,
                 background: "transparent",
                 borderRadius: "6px",
-                padding: "10px",
+                padding: "5px",
                 fontFamily: "Inter",
                 fontSize: "12px",
                 lineHeight: "1.4",
