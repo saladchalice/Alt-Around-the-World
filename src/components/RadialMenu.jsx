@@ -1,5 +1,5 @@
 // RadialMenu.js
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import * as d3 from 'd3';
 import '../index.scss';
 import PropTypes from 'prop-types';
@@ -19,6 +19,57 @@ const RadialMenu = ({ countryData, position, onClose, onSongSelect }) => {
             }
         };
     }, []);
+
+    const handleSongSelect = useCallback((index) => {
+        if (!countryData || !onSongSelect) return;
+        
+        onSongSelect({
+          song: countryData.songs[index],
+          artist: countryData.artist,
+          albumUrl: countryData.album_urls[index]
+        });
+    }, [countryData, onSongSelect]);
+
+    const changeSelection = useCallback((direction) => {
+        if (!countryData) return;
+        
+        // Stop current playback
+        if (audioRef.current) {
+          audioRef.current.pause();
+          setIsPlaying(false);
+        }
+      
+        // Calculate new index with wrap-around
+        const newIndex = (selectedIndex + direction + countryData.count) % countryData.count;
+        setSelectedIndex(newIndex);
+        handleSongSelect(newIndex);
+    }, [countryData, selectedIndex, handleSongSelect]);
+
+
+    const togglePlayback = useCallback(() => {
+        if (!countryData || !countryData.preview_urls[selectedIndex]) return;
+
+        if (isPlaying) {
+            audioRef.current.pause();
+            setIsPlaying(false);
+        } else {
+            // Stop any existing playback
+            if (audioRef.current) {
+                audioRef.current.pause();
+            }
+            
+            // Create new audio instance
+            audioRef.current = new Audio(countryData.preview_urls[selectedIndex]);
+            audioRef.current.play()
+                .then(() => setIsPlaying(true))
+                .catch(err => console.error("Playback failed:", err));
+            
+            // Handle when audio ends naturally
+            audioRef.current.onended = () => setIsPlaying(false);
+        }
+    }, [countryData, selectedIndex, isPlaying]);
+
+    
 
     // Handle keyboard events
     useEffect(() => {
@@ -50,55 +101,11 @@ const RadialMenu = ({ countryData, position, onClose, onSongSelect }) => {
 
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [countryData, selectedIndex, isPlaying]);
+    }, [countryData, selectedIndex, isPlaying, changeSelection, togglePlayback, onClose]);
 
-    const changeSelection = (direction) => {
-        if (!countryData) return;
-        
-        // Stop current playback
-        if (audioRef.current) {
-          audioRef.current.pause();
-          setIsPlaying(false);
-        }
-      
-        // Calculate new index with wrap-around
-        const newIndex = (selectedIndex + direction + countryData.count) % countryData.count;
-        setSelectedIndex(newIndex);
-        handleSongSelect(newIndex); // Add this line to notify parent of new selection
-      };
+    
 
-    const togglePlayback = () => {
-        if (!countryData || !countryData.preview_urls[selectedIndex]) return;
-
-        if (isPlaying) {
-            audioRef.current.pause();
-            setIsPlaying(false);
-        } else {
-            // Stop any existing playback
-            if (audioRef.current) {
-                audioRef.current.pause();
-            }
-            
-            // Create new audio instance
-            audioRef.current = new Audio(countryData.preview_urls[selectedIndex]);
-            audioRef.current.play()
-                .then(() => setIsPlaying(true))
-                .catch(err => console.error("Playback failed:", err));
-            
-            // Handle when audio ends naturally
-            audioRef.current.onended = () => setIsPlaying(false);
-        }
-    };
-
-    const handleSongSelect = (index) => {
-        if (!countryData || !onSongSelect) return; // Add this check
-        
-        onSongSelect({
-          song: countryData.songs[index],
-          artist: countryData.artist, // or countryData.artists[index]
-          albumUrl: countryData.album_urls[index]
-        });
-      };
+    
 
     useEffect(() => {
         if (!countryData) return;
@@ -225,7 +232,7 @@ const RadialMenu = ({ countryData, position, onClose, onSongSelect }) => {
         .style('transform', 'scale(1)');
 
 
-    }, [countryData, position, selectedIndex, isPlaying]);
+    }, [countryData, position, selectedIndex, isPlaying, handleSongSelect, togglePlayback]);
 
     // Close menu when clicking outside
     useEffect(() => {
