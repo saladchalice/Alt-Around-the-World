@@ -23,6 +23,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 20px;
 }
 
+p.text{
+    font-size:12px;
+}
+
 #grid-container {
     display: grid;
     grid-template-columns: 1fr 80%; /* Left side takes 1 fraction, right side takes 85% */
@@ -80,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0px;
     color: black; /* Standard Apple blue */
     font-weight: 600; /* Medium boldness like Apple defaults */
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
 }
 
@@ -127,19 +131,19 @@ html {
 }
 
 @media (max-width: 1200px) {
-    html {
+    p {
         font-size: 12px; /* Reduce size for medium screens */
     }
 }
 
 @media (max-width: 768px) {
-    html {
+    p {
         font-size: 10px; /* Smaller size for tablet screens */
     }
 }
 
 @media (max-width: 480px) {
-    html {
+    p {
         font-size: 8px; /* Compact size for mobile devices */
     }
 }
