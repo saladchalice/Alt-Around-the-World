@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Alt-Around-the-World/static/css/main.0fe92ccd.css",
+    "main.js": "/Alt-Around-the-World/static/js/main.b3ff1b52.js",
+    "static/js/453.9d4b5ab9.chunk.js": "/Alt-Around-the-World/static/js/453.9d4b5ab9.chunk.js",
+    "index.html": "/Alt-Around-the-World/index.html",
+    "main.0fe92ccd.css.map": "/Alt-Around-the-World/static/css/main.0fe92ccd.css.map",
+    "main.b3ff1b52.js.map": "/Alt-Around-the-World/static/js/main.b3ff1b52.js.map",
+    "453.9d4b5ab9.chunk.js.map": "/Alt-Around-the-World/static/js/453.9d4b5ab9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0fe92ccd.css",
+    "static/js/main.b3ff1b52.js"
+  ]
+}
