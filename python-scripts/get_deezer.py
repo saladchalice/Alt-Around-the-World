@@ -20,48 +20,58 @@ def remove_punctuation(input_string):
 album_urls = []
 preview_urls = []
 all_data = []
+responses = []
+
 
 for i in range(len(minidata)):
     if (i + 1) % 49 == 0:
         time.sleep(5)
 
-    song_name = remove_punctuation(minidata.iloc[i]['song name']).strip()
-    artist_name = remove_punctuation(minidata.iloc[i]['artist']).strip()
-    term = '+'.join(song_name.split()) + '+' + '+'.join(artist_name.split())
-    
-    url = f'https://api.deezer.com/search?q={term}&limit=10'
+    # Create search term
+    songName = '+'.join(remove_punctuation(minidata.iloc[i]['song name']).split())
+    artistName = '+'.join(remove_punctuation(minidata.iloc[i]['artist']).split())
+    term = songName + '+' + artistName
+    print(term)
+
+    # Make request to Deezer API (increase limit to allow better matching)
+    url = f'https://api.deezer.com/search?q={term}&limit=5'
     response = requests.get(url)
-    
+    print(response)
+
     album_url = None
     preview_url = None
-    
+
     if response.status_code == 200:
         response_json = response.json()
-        best_score = 0
-        best_match = None
+        responses.append(response_json)
+        candidates = response_json.get('data', [])
         
-        for item in response_json.get('data', []):
+        best_score = 0
+        best_item = None
+        
+        target_song = minidata.iloc[i]['song name'].lower().strip()
+        target_artist = minidata.iloc[i]['artist'].lower().strip()
+
+        for item in candidates:
             song_match = item['title'].lower().strip()
             artist_match = item['artist']['name'].lower().strip()
-            score = fuzz.partial_ratio(song_name.lower(), song_match) + fuzz.partial_ratio(artist_name.lower(), artist_match)
-            
-            if score > best_score:
-                best_score = score
-                best_match = item
-        
-        if best_match and best_score > 150:  # Adjust threshold as needed
-            album_url = best_match['album']['cover_medium']
-            preview_url = best_match['preview']
+            song_score = fuzz.partial_ratio(target_song, song_match)
+            artist_score = fuzz.partial_ratio(target_artist, artist_match)
+            total_score = (song_score + artist_score) / 2
+
+            if total_score > best_score:
+                best_score = total_score
+                best_item = item
+
+        if best_score > 80 and best_item is not None:
+            album_url = best_item['album']['cover_medium']
+            preview_url = best_item['preview']
+
+    else:
+        responses.append('No Results')
 
     album_urls.append(album_url)
     preview_urls.append(preview_url)
-
-    all_data.append({
-        "original_song": minidata.iloc[i]['song name'],
-        "original_artist": minidata.iloc[i]['artist'],
-        "album_url": album_url,
-        "preview_url": preview_url
-    })
 
 
 new_lnos = lnos.copy()
