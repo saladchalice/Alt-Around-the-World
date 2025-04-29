@@ -213,11 +213,17 @@ const RadialMenu = ({ countryData, position, onClose, onSongSelect }) => {
         if (y < 0) y = 10;
 
         radialMenu
-            .style('left', `${x}px`)
-            .style('top', `${y}px`)
-            .transition()
-            .duration(300)
-            .style('opacity', 1);
+        .style('left', `${x - menuWidth / 2}px`)
+        .style('top', `${y - menuHeight / 2}px`)
+        .style('opacity', 0)
+        .style('transform', 'scale(0.5)')
+        .style('transform-origin', 'center center')
+        .transition()
+        .duration(500)
+        .ease(d3.easeBackOut) // <-- Overshoots slightly and settles
+        .style('opacity', 1)
+        .style('transform', 'scale(1)');
+
 
     }, [countryData, position, selectedIndex, isPlaying]);
 
@@ -241,6 +247,9 @@ const RadialMenu = ({ countryData, position, onClose, onSongSelect }) => {
             className="radial-menu"
             style={{
                 position: "absolute",
+                left: `${position.x}px`,
+                top: `${position.y}px`,
+                transform: "translate(-50%, -50%)",
                 opacity: 0,
                 background: "transparent",
                 borderRadius: "6px",

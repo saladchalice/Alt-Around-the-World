@@ -80,38 +80,32 @@ const ChoroplethMap =  ({ onCountrySelect, onSongSelect  }) => {
                 .style("z-index", "1000");
 
             const mouseover = function (event, d) {
-                //log countryname
                 const countryName = d.properties.ADMIN;
                 onCountrySelect(countryName);
-
-
+            
                 d3.selectAll(".country").style("opacity", 0.75);
                 d3.select(this)
                     .style("stroke-width", 0.6)
                     .style("stroke", "black")
                     .style("opacity", 1)
                     .classed("hover", true);
-
+            
                 event.stopPropagation();
-                
-                const countryData = countryStats.get(d.properties.ADMIN);                
-                const centroid = path.centroid(d);
+            
+                const countryData = countryStats.get(d.properties.ADMIN);
+                const centroid = path.centroid(d); // Calculate the centroid of the country
                 const transform = d3.zoomTransform(g.node());
-        
+            
                 const transformedX = transform.applyX(centroid[0]);
                 const transformedY = transform.applyY(centroid[1]);
-
-                const svgBounds = d3.select(svgRef.current).node().getBoundingClientRect();
-
+            
                 if (countryData) {
-                    tooltip.style("opacity", 0);
-                    
                     setMenuState({
                         show: true,
                         countryData: countryData,
                         position: {
-                            x: transformedX + svgBounds.left,
-                            y: transformedY + svgBounds.top
+                            x: transformedX,
+                            y: transformedY
                         }
                     });
                 }
