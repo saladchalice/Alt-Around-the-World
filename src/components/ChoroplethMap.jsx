@@ -25,9 +25,8 @@ const ChoroplethMap =  ({ onCountrySelect, onSongSelect  }) => {
         };
 
         const createChoropleth = async (data) => {
-            const margin = { top: 0, right: 0, bottom: 0, left: 0 },
-                width = window.innerWidth * 0.8,
-                height = window.innerHeight;
+            const width = window.innerWidth * 0.8;
+            const height = window.innerHeight;
 
             const exceptions = new Set(["of", "the", "and", "in", "on", "at", "for"]);
 
@@ -155,7 +154,7 @@ const ChoroplethMap =  ({ onCountrySelect, onSongSelect  }) => {
         };
 
         loadData();
-    }, []);
+    }, [onCountrySelect]);
 
     const closeMenu = () => {
         setMenuState(prev => ({ ...prev, show: false }));
