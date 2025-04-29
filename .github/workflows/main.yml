@@ -25,7 +25,7 @@ jobs:
       - name: Run data fetch script
         run: |
           cd python-scripts
-          python fetch_deezer_data.py
+          python get_deezer.py
 
       - name: Commit and push updated data
         run: |
