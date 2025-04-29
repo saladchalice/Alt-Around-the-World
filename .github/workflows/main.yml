@@ -1,5 +1,8 @@
 name: Update Deezer Data and Deploy React App
 
+permissions:
+  contents: write # Required to push changes to the repository
+
 on:
   schedule:
     - cron: '0 * * * *'  # Runs daily at midnight
