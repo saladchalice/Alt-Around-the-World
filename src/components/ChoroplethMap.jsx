@@ -2,16 +2,35 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import RadialMenu from './RadialMenu';
 
-const ChoroplethMap =  ({ onCountrySelect, onSongSelect  }) => {
+const ChoroplethMap = ({ onCountrySelect, onSongSelect }) => {
+    const containerRef = useRef();
     const svgRef = useRef();
     const tooltipRef = useRef();
+    const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
     const [menuState, setMenuState] = useState({
         show: false,
         countryData: null,
         position: { x: 0, y: 0 }
     });
 
+    // Handle window resize
+     useEffect(() => {
+        const handleResize = () => {
+            const newWidth = Math.min(window.innerWidth * 0.8, 1200); // 80% width with max of 1200px
+            setDimensions({
+                width: newWidth,
+                height: newWidth * 0.6 // Maintain aspect ratio
+            });
+        };
+
+        handleResize(); // Initial call
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     useEffect(() => {
+        if (dimensions.width === 0 || dimensions.height === 0) return;
+
         const loadData = async () => {
             const data = await d3.csv(process.env.PUBLIC_URL + '/data/lnos2.csv', (row) => ({
                 country: row.country,
@@ -25,8 +44,8 @@ const ChoroplethMap =  ({ onCountrySelect, onSongSelect  }) => {
         };
 
         const createChoropleth = async (data) => {
-            const width = window.innerWidth * 0.8;
-            const height = window.innerHeight;
+            const { width, height } = dimensions;
+            const margin = { top: 20, right: 20, bottom: 20, left: 20 };
 
             const exceptions = new Set(["of", "the", "and", "in", "on", "at", "for"]);
 
@@ -50,19 +69,21 @@ const ChoroplethMap =  ({ onCountrySelect, onSongSelect  }) => {
             const world = await d3.json(process.env.PUBLIC_URL+'/data/countries.geojson');
 
             const zoom = d3.zoom()
-                .scaleExtent([1.25, 12])
+                .scaleExtent([1, 8])
                 .translateExtent([[0, 0], [width, height]])
                 .on('zoom', zoomed);
 
             const svg = d3.select(svgRef.current)
                 .attr('width', width)
                 .attr('height', height)
-                .attr('class', 'lnos-chart');
+                .attr('viewBox', `0 0 ${width} ${height}`)
+                .attr('preserveAspectRatio', 'xMidYMid meet')
+                .style('background', '#f8f8f8');
 
             const projection = d3.geoNaturalEarth1()
-                .fitExtent([[0, 0], [width, height]], world);
+                .fitSize([width - margin.left - margin.right, height - margin.top - margin.bottom], world);
 
-            const path = d3.geoPath().projection(projection);          
+            const path = d3.geoPath().projection(projection);
 
             const tooltip = d3.select(tooltipRef.current)
                 .style("opacity", 0)
@@ -92,8 +113,8 @@ const ChoroplethMap =  ({ onCountrySelect, onSongSelect  }) => {
                 event.stopPropagation();
             
                 const countryData = countryStats.get(d.properties.ADMIN);
-                const centroid = path.centroid(d); // Calculate the centroid of the country
-                const transform = d3.zoomTransform(g.node());
+                const centroid = path.centroid(d);
+                const transform = d3.zoomTransform(svg.node());
             
                 const transformedX = transform.applyX(centroid[0]);
                 const transformedY = transform.applyY(centroid[1]);
@@ -121,7 +142,7 @@ const ChoroplethMap =  ({ onCountrySelect, onSongSelect  }) => {
                 .domain([0, maxCount]);
 
             svg.call(zoom);
-            svg.selectAll('g').remove();
+            svg.selectAll('*').remove();
 
             const g = svg.append('g');
 
@@ -139,14 +160,14 @@ const ChoroplethMap =  ({ onCountrySelect, onSongSelect  }) => {
                 .on("mouseover", mouseover)
                 .on("mouseleave", mouseleave);
 
-            const defaultScale = 1.25;
-            const tx = width / 2;
-            const ty = height / 2;
-
-            svg.call(zoom.transform, d3.zoomIdentity
-                .translate(tx, ty)
-                .scale(defaultScale)
-                .translate(-width / 2, -height / 2));
+            // Initial zoom and center
+            svg.call(
+                zoom.transform,
+                d3.zoomIdentity
+                    .translate(width / 2, height / 2)
+                    .scale(1.5)
+                    .translate(-width / 2, -height / 2)
+            );
 
             function zoomed(event) {
                 g.attr('transform', event.transform);
@@ -154,16 +175,33 @@ const ChoroplethMap =  ({ onCountrySelect, onSongSelect  }) => {
         };
 
         loadData();
-    }, [onCountrySelect]);
+    }, [dimensions, onCountrySelect]);
 
     const closeMenu = () => {
         setMenuState(prev => ({ ...prev, show: false }));
     };
 
     return (
-        <div>
+        <div 
+            ref={containerRef}
+            style={{
+                position: 'relative',
+                width: '80vw', // Adjust based on your needs
+                height: 'calc(80vw * 0.6)', // Adjust based on your needs
+                overflow: 'hidden',
+                margin: '0 auto',
+            }}
+        >
             <div ref={tooltipRef} className="tooltip"></div>
-            <svg ref={svgRef}></svg>
+            <svg 
+                ref={svgRef}
+                style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'block'
+                }}
+            ></svg>
+            
             {menuState.show && (
                 <RadialMenu 
                     countryData={menuState.countryData} 
@@ -172,25 +210,25 @@ const ChoroplethMap =  ({ onCountrySelect, onSongSelect  }) => {
                     onSongSelect={onSongSelect}
                 />
             )}
-            <div 
-            style={{
+            
+            <div style={{
                 position: 'absolute',
-                bottom: '0px', // Slight padding from the bottom of the container
+                bottom: '10px',
                 left: '50%',
                 transform: 'translateX(-50%)',
-                width: '99%', // Matches the width of the parent container
-                maxWidth: '80vw', // Ensures it doesn't exceed the SVG width
+                width: '90%',
+                maxWidth: '800px',
                 backgroundColor: 'rgba(0, 0, 0, 0.4)',
                 color: 'white',
                 textAlign: 'center',
                 padding: '10px',
                 fontSize: '14px',
                 fontFamily: 'Arial, sans-serif',
-                zIndex: 1000
-            }}
-        >
-            Hover to select a country, use arrow keys to select a song, press space to play the song, and escape to exit the menu.
-        </div>
+                zIndex: 1000,
+                borderRadius: '5px'
+            }}>
+                Hover to select a country, use arrow keys to select a song, press space to play the song, and escape to exit the menu.
+            </div>
         </div>
     );
 };
