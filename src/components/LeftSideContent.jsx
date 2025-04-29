@@ -39,9 +39,7 @@ const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
                 )}
             </div>
             <div>
-                    <p className="disclaimer">This website is intended solely for the promotion and discovery of musical artists. All music previews, album artwork, and 
-                        related metadata are provided through the iTunes Search API, owned and operated by Apple Inc. 
-                        This site is not affiliated with or endorsed by Apple Inc. or iTunes. All rights to the content displayed belong to their respective owners.</p>
+                    <p className="disclaimer">This project makes use of the Deezer API to retrieve publicly available music metadata including album artwork and audio previews. All data obtained via the Deezer API is subject to Deezer's terms of use and is used solely for educational and non-commercial purposes. This project does not store or redistribute full tracks or any copyrighted content beyond what is returned through official API endpoints. Album covers and audio previews are fetched dynamically and are not hosted by this application. All rights to music content, imagery, and associated metadata belong to Deezer and the respective artists, labels, and rights holders.</p>
                 </div>
         </div>
     );

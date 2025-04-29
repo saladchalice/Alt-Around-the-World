@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Add these new styles */
 .selection-display {
     margin: 20px 0;
-    margin-top: 150px;
+    margin-top: 50px;
     padding: 0px;
     background: rgba(255, 255, 255, 0.6); /* Brighter, soft background */
     border-radius: 12px; /* Softer rounded corners */

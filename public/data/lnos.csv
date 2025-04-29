@@ -5,6 +5,7 @@ argentina,indie rock,turista,homogenica,8
 argentina,indie rock,animales,homogenica,8
 argentina,indie rock,ratas,homogenica,8.5
 argentina,indie rock,somniferos,no te me enojes,7.5
+argentina,indie rock,paraisos mentales,marchitorial,7.5
 armenia,rock,the noise is a scream,clocker,6
 aruba,indie rock,stomp,the revoir,8.5
 austria,experimental rock,acting moderate,killed by 9v batteries,9
@@ -27,7 +28,6 @@ bulgaria,alt rock,do mene e mayka ti,TDK,7.5
 cambodia,folk rock,black hair,kampot playboys,7
 canada,alt rock,le metronome,malajube,10
 canada,indie rock,glu (coule sur moi),zen bamboo,9.7
-canada,experimental rock,bulbe,violett pi,7
 canada,alt rock,montreal -40,malajube,9.5
 canada,alt rock,ah ouin,chocolat,7
 canada,alt rock,pate filo,malajube,8
@@ -40,6 +40,7 @@ chile,rock,el viaje,coni lewin,7.5
 china,alternative,光,arches,7
 china,shoegaze,i just want 2 hear your voice...,strawberry lust,7
 colombia,emo,become,the hall effect,7
+costa rica,shoegaze,cuarto rosa,sway,7
 croatia,psychedelic rock,meke ruke,cuvarkuca,7
 czechia,experimental rock,sign n spell,here,7
 cuba,shoegaze,no te veo,land whales,8.7
@@ -100,8 +101,7 @@ kyrgyzstan,pop rock (?) ,Город-точка,gorod 312,7
 latvia,experimental rock,pulkstens,mazi smirdigie kocini,7
 latvia,alt rock,fabrikas meitenes dziesma,zidruns,5
 latvia,dream pop,i want you,tribes of the city,7
-lebanon,dream pop,dead end,postcards,6
-lebanon,dream pop,colorblind,postcards,7
+lebanon,shoegaze,feel better,bliss,7
 luxembourg,alt rock,6th of august,holy national victims,6.5
 malaysia,alt rock,bintang,statik,8.9
 malaysia,alt rock,gelap,statik,8.5
@@ -140,7 +140,6 @@ portugal,indie rock,o vento,los hermanos,8
 portugal,dark wave rock,pale,aenima,8
 russia,alt rock,untitled,franco,8.3
 russia,math rock,Погребок ,franco,8.3
-saudi arabia,experimental rock,يش سويت,ana.n7n,6
 saudi arabia,alt rock,mouj al bahar,seera,7
 united kingdom,shoegaze,bliss,dallas love field,8.8
 republic of serbia,indie rock,svet se menja,proto tip,6
