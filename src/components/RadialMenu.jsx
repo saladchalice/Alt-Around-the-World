@@ -20,6 +20,13 @@ const RadialMenu = ({ countryData, position, onClose, onSongSelect }) => {
         };
     }, []);
 
+    // misc functions --------------------------------------------------------
+    const getPreviewUrl = async (trackId) => {
+        const res = await fetch(`/api/preview?trackId=${trackId}`);
+        const data = await res.json();
+        return data.preview;
+      };
+
     const handleSongSelect = useCallback((index) => {
         if (!countryData || !onSongSelect) return;
         
@@ -46,28 +53,36 @@ const RadialMenu = ({ countryData, position, onClose, onSongSelect }) => {
     }, [countryData, selectedIndex, handleSongSelect]);
 
 
-    const togglePlayback = useCallback(() => {
-        if (!countryData || !countryData.preview_urls[selectedIndex]) return;
-
-        if (isPlaying) {
+    const togglePlayback = useCallback(async () => {
+        console.log(countryData.track_id);
+        if (!countryData?.track_ids?.[selectedIndex]) return;
+              
+        const trackId = countryData.track_ids?.[selectedIndex];
+        console.log("Track ID:", trackId);
+      
+        try {
+          const preview = await getPreviewUrl(trackId); // <-- use it here
+      
+          if (!preview) {
+            console.error("No preview available");
+            return;
+          }
+      
+          if (isPlaying) {
             audioRef.current.pause();
             setIsPlaying(false);
-        } else {
-            // Stop any existing playback
-            if (audioRef.current) {
-                audioRef.current.pause();
-            }
-            
-            // Create new audio instance
-            audioRef.current = new Audio(countryData.preview_urls[selectedIndex]);
-            audioRef.current.play()
-                .then(() => setIsPlaying(true))
-                .catch(err => console.error("Playback failed:", err));
-            
-            // Handle when audio ends naturally
+          } else {
+            if (audioRef.current) audioRef.current.pause();
+            audioRef.current = new Audio(preview);
+            await audioRef.current.play();
+            setIsPlaying(true);
             audioRef.current.onended = () => setIsPlaying(false);
+          }
+        } catch (err) {
+          console.error("Error fetching preview:", err);
         }
-    }, [countryData, selectedIndex, isPlaying]);
+      }, [countryData, selectedIndex, isPlaying]);
+      
 
     
 
@@ -127,7 +142,7 @@ const RadialMenu = ({ countryData, position, onClose, onSongSelect }) => {
         
 
         // Helper function to create album image HTML
-        const displayAlbumImage = (albumUrl, previewUrl, size, isSelected) => {
+        const displayAlbumImage = (albumUrl, size, isSelected) => {
             const border = isSelected ? '3px solid #4CAF50' : '1px solid rgba(0,0,0,0.1)';
             const transform = isSelected ? 'scale(1.1)' : 'scale(1)';
             
@@ -171,12 +186,11 @@ const RadialMenu = ({ countryData, position, onClose, onSongSelect }) => {
             })
             .html((d, i) => {
                 const albumUrl = countryData.album_urls[i];
-                const previewUrl = countryData.preview_urls[i];
                 const isSelected = i === selectedIndex;
                 return `
                     <div class="song-container" data-index="${i}">
                         <div class="url-container">
-                            ${displayAlbumImage(albumUrl, previewUrl, iconSize, isSelected)}
+                            ${displayAlbumImage(albumUrl, iconSize, isSelected)}
                         </div>
                     </div>
                 `;

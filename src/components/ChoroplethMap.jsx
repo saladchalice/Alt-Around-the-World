@@ -38,7 +38,7 @@ const ChoroplethMap = ({ onCountrySelect, onSongSelect }) => {
                 artist: row.artist,
                 songName: row["song name"],
                 album_url: row.album_url,
-                preview_url: row.preview_url
+                track_id: row.track_id
             }));
             createChoropleth(data);
         };
@@ -54,7 +54,7 @@ const ChoroplethMap = ({ onCountrySelect, onSongSelect }) => {
                 v => ({
                     count: v.length,
                     songs: v.map(d => `${d.songName} - ${d.artist}`),
-                    preview_urls: v.map(d => d.preview_url),
+                    track_ids: v.map(d => d.track_id),
                     album_urls: v.map(d => d.album_url)
                 }),
                 d => d.country
@@ -65,6 +65,7 @@ const ChoroplethMap = ({ onCountrySelect, onSongSelect }) => {
                             : word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
                     .join(' ')
             );
+            // console.log(countryStats);
 
             const world = await d3.json(process.env.PUBLIC_URL+'/data/countries.geojson');
 

@@ -18,7 +18,7 @@ def remove_punctuation(input_string):
     return re.sub(r'\s+', ' ', no_punc).strip()
 
 album_urls = []
-preview_urls = []
+track_ids = []
 all_data = []
 responses = []
 
@@ -40,6 +40,7 @@ for i in range(len(minidata)):
 
     album_url = None
     preview_url = None
+    track_id= None
 
     if response.status_code == 200:
         response_json = response.json()
@@ -65,21 +66,24 @@ for i in range(len(minidata)):
 
         if best_score > 80 and best_item is not None:
             album_url = best_item['album']['cover_medium']
-            preview_url = best_item['preview']
+            track_id = best_item['id']
 
     else:
         responses.append('No Results')
 
     album_urls.append(album_url)
-    preview_urls.append(preview_url)
+    track_ids.append(track_id)
 
 
 new_lnos = lnos.copy()
 new_lnos['album_url']=pd.Series(album_urls)
-new_lnos['preview_url']=pd.Series(preview_urls)
+new_lnos['track_id'] = pd.Series(track_ids, dtype="string")
 
 # Save the DataFrame as CSV in the public/data directory
 output_path = '../public/data/lnos2.csv'
 new_lnos.to_csv(output_path, index=False)
 
 print(f'Data saved to {output_path}')
+
+with open('../public/data/deezer_responses.json', 'w') as f:
+    json.dump(responses, f, indent=2)
