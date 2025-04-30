@@ -22,10 +22,11 @@ const RadialMenu = ({ countryData, position, onClose, onSongSelect }) => {
 
     // misc functions --------------------------------------------------------
     const getPreviewUrl = async (trackId) => {
-        const res = await fetch(`/api/preview?trackId=${trackId}`);
+        const res = await fetch(`https://deezer-api-psi.vercel.app/api/preview?trackId=${trackId}`);
         const data = await res.json();
         return data.preview;
       };
+      
 
     const handleSongSelect = useCallback((index) => {
         if (!countryData || !onSongSelect) return;
