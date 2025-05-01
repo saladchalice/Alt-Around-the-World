@@ -6,56 +6,70 @@ import json
 import re
 import os
 import string
+import pykakasi
 
-# Example input: replace this with your own import
-# e.g., from deezer_data_source import lnos
+# Load data
 lnos = pd.read_csv("../public/data/lnos.csv")
 minidata = lnos[:]
 
+# Initialize kakasi converter
+kks = pykakasi.kakasi()
+kks.setMode("H", "a")  # Hiragana to ascii
+kks.setMode("K", "a")  # Katakana to ascii
+kks.setMode("J", "a")  # Japanese to ascii
+kks.setMode("r", "Hepburn")  # Romanization style
+conv = kks.getConverter()
+
 # Utility
 def remove_punctuation(input_string):
-    no_punc= re.sub(r'[^\w\s]', '', input_string)
+    no_punc = re.sub(r'[^\w\s]', '', input_string)
     return re.sub(r'\s+', ' ', no_punc).strip()
+
+def romanize(text):
+    return conv.do(remove_punctuation(str(text))).lower().strip()
 
 album_urls = []
 track_ids = []
 all_data = []
 responses = []
 
-
 for i in range(len(minidata)):
     if (i + 1) % 49 == 0:
         time.sleep(5)
 
-    # Create search term
-    songName = '+'.join(remove_punctuation(minidata.iloc[i]['song name']).split())
-    artistName = '+'.join(remove_punctuation(minidata.iloc[i]['artist']).split())
-    term = songName + '+' + artistName
-    print(term)
+    # Romanize and construct search term
+    raw_song = minidata.iloc[i]['song name']
+    raw_artist = minidata.iloc[i]['artist']
+    
+    song_roman = romanize(raw_song)
+    artist_roman = romanize(raw_artist)
+    term = '+'.join(song_roman.split()) + '+' + '+'.join(artist_roman.split())
+    
+    print(f"Searching: {term}")
 
-    # Make request to Deezer API (increase limit to allow better matching)
+    # Make API request
     url = f'https://api.deezer.com/search?q={term}&limit=5'
     response = requests.get(url)
     print(response)
 
     album_url = None
-    preview_url = None
-    track_id= None
+    track_id = None
 
     if response.status_code == 200:
         response_json = response.json()
         responses.append(response_json)
         candidates = response_json.get('data', [])
-        
+
         best_score = 0
         best_item = None
-        
-        target_song = minidata.iloc[i]['song name'].lower().strip()
-        target_artist = minidata.iloc[i]['artist'].lower().strip()
+
+        # Romanize target for comparison
+        target_song = song_roman
+        target_artist = artist_roman
 
         for item in candidates:
-            song_match = item['title'].lower().strip()
-            artist_match = item['artist']['name'].lower().strip()
+            song_match = romanize(item['title'])
+            artist_match = romanize(item['artist']['name'])
             song_score = fuzz.partial_ratio(target_song, song_match)
             artist_score = fuzz.partial_ratio(target_artist, artist_match)
             total_score = (song_score + artist_score) / 2
@@ -67,23 +81,20 @@ for i in range(len(minidata)):
         if best_score > 80 and best_item is not None:
             album_url = best_item['album']['cover_medium']
             track_id = best_item['id']
-
     else:
         responses.append('No Results')
 
     album_urls.append(album_url)
     track_ids.append(track_id)
 
-
+# Save results
 new_lnos = lnos.copy()
-new_lnos['album_url']=pd.Series(album_urls)
+new_lnos['album_url'] = pd.Series(album_urls)
 new_lnos['track_id'] = pd.Series(track_ids, dtype="string")
 
-# Save the DataFrame as CSV in the public/data directory
 output_path = '../public/data/lnos2.csv'
 new_lnos.to_csv(output_path, index=False)
-
 print(f'Data saved to {output_path}')
 
-with open('../public/data/deezer_responses.json', 'w') as f:
-    json.dump(responses, f, indent=2)
+with open('../public/data/deezer_responses.json', 'w', encoding='utf-8') as f:
+    json.dump(responses, f, indent=2, ensure_ascii=False)

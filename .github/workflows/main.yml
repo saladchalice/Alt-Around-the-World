@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests pandas rapidfuzz
+          pip install requests pandas rapidfuzz pykakasi
 
       - name: Run data fetch script
         run: |
