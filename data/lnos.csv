@@ -1,13 +1,15 @@
 country,genre,song name,artist,rating
 antarctica,indie rock,how many people,nunatuk,6.5
-argentina,indie rock,bichos,homogenica,7
+argentina,indie rock,ratas,homogenica,7
 argentina,indie rock,turista,homogenica,8
 argentina,indie rock,animales,homogenica,8
-argentina,indie rock,ratas,homogenica,8.5
+argentina,indie rock,bichos,homogenica,8.5
 argentina,indie rock,somniferos,no te me enojes,7.5
 argentina,indie rock,paraisos mentales,marchitorial,7.5
 armenia,rock,the noise is a scream,clocker,6
 aruba,indie rock,stomp,the revoir,8.5
+australia,indie rock,zoom,last dinosaurs,10
+australia,indie rock,weekend,last dinosaurs,8
 austria,experimental rock,acting moderate,killed by 9v batteries,9
 bangladesh,alternative,sheishob din raatri,karnival,8.5
 belarus,alt rock,Дажджамі,Бяз Назвы ,7.5
@@ -27,16 +29,17 @@ brunei,indie rock,i don't want to go home,guerilla orchestra,7
 bulgaria,alt rock,do mene e mayka ti,TDK,7.5
 cambodia,folk rock,black hair,kampot playboys,7
 canada,alt rock,le metronome,malajube,10
+canada,indie rock,annie (pourquoi t'es partie?),babylones,8
 canada,indie rock,glu (coule sur moi),zen bamboo,9.7
 canada,alt rock,montreal -40,malajube,9.5
 canada,alt rock,ah ouin,chocolat,7
 canada,alt rock,pate filo,malajube,8
 canada,experimental rock,fleur de londres,violett pi,7
 canada,alt rock,la monogamie,malajube,8
-canada,indie rock,annie (pourquoi t'es partie?),babylones,8
 cabo verde,indie rock,sinti alive,krad,6.9
 chile,math rock,resonancias,herbario,7
 chile,rock,el viaje,coni lewin,7.5
+china,noise rock,disco,riot in school,8
 china,alternative,光,arches,7
 china,shoegaze,i just want 2 hear your voice...,strawberry lust,7
 colombia,emo,become,the hall effect,7
@@ -56,7 +59,6 @@ france,indie rock,lasso,phoenix,7
 france,rock,reggie lewis,sport,6
 france,indie rock,armistice,phoenix,8
 france,electronic,safety crash,tapeworms,8
-france,indie rock,je te vois encore,foggy bottoms,7.5
 germany,alternative,pausenlied,125 rue montmartre,9
 germany,indie rock,nacht,betterov,7
 germany,alternative,disco hijack,125 rue montmartre,8.5
@@ -84,7 +86,7 @@ japan,midwest emo / alt rock,phony,by the end of the summer,9
 japan,indie rock,glass marbles,susquatch,9
 japan,indie rock,pretty old man,no buses,9
 japan,indie rock,untouchable you,no buses,9
-japan,indie rock,シュレディンガーの猫,brian the sun,9
+japan,indie rock,schrodinger's cat,brian the sun,9
 japan,indie rock,心の実,indigo la end,9.5
 japan,indie rock,girl,no buses,9.5
 japan,indie rock,with or without it,no buses,9.5
@@ -107,7 +109,7 @@ malaysia,alt rock,gelap,statik,8.5
 malaysia,alt rock,dia,statik,7
 malta,prog rock,bloodstream waterfall cannonball,eyes to argus,7
 mexico,indie rock,quizas no llames despues,"gusstav, joan page",7.5
-mexico,alt rock,ya no hay verano,depresion sonora,6.5
+spain,alt rock,ya no hay verano,depresion sonora,6.5
 mexico,alt rock,miente,bengala,6.5
 mexico,alt rock,eres,cafe tacvba,9
 moldova,metal,la ciocana,gandul matei,7
@@ -124,6 +126,7 @@ netherlands,indie rock,misery galore,bettie serveert,9
 netherlands,indie rock,fallen foster,bettie serveert,9.5
 netherlands,indie rock,rudder,bettie serveert,9
 netherlands,indie rock,geek,bettie serveert,8.6
+new zealand,indie rock,all i need,bleeding star,8
 north macedonia,alt rock,peski nakaj doma,Дивоградба (divogradka),9
 nigeria,rock,amin,clayrocksu,6.7
 nigeria,rock,oge,clayrocksu,7
@@ -169,7 +172,6 @@ switzerland,alt rock,new in colors,favez,9
 switzerland,alt rock,headed for the ocean,favez,8.8
 switzerland,alt rock,chasing honesty,favez,7
 taiwan,alt rock,爛泥,no party for cao dong,8.5
-taiwan,alt rock,da feng chui,no party for cao dong,9
 thailand,pop/indie rock(?),get up,kiki,7
 thailand,indie rock,let me go,yonlapa,8
 thailand,indie rock,i'm just like that,yonlapa,7.8
@@ -181,6 +183,7 @@ turkey,alt rock,dünyanın sonuna doğmuşum,maNga,7.7
 turkey,alt rock,cambaz,mor ve ötesi,8.7
 ukraine,indie rock,Я кусаю щоки,the unsleeping,8
 ukraine,indie rock,Не Сплю,the unsleeping,7.8
+united kingdom,rock,goleuadau llundain,daniel lloyd a mr pinc,8
 United States of America,folk rock,soft stud,black belt eagle scout,7.5
 uruguay,rock,upside down,astroboy,7.5
 uruguay,rock,al vacio,no te va gustar,8
