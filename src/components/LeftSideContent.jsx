@@ -4,7 +4,6 @@ const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
     return (
         <div id="left-side">
             <h2>Alt Around the World</h2>
-            <h5>Alternatively, "Long Night of Solace"</h5>
             <div className="selection-display">
                 {selectedCountry && (
                 <div className="country-selection">

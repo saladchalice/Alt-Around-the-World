@@ -45,7 +45,7 @@ const ChoroplethMap = ({ onCountrySelect, onSongSelect }) => {
 
         const createChoropleth = async (data) => {
             const { width, height } = dimensions;
-            const margin = { top: 20, right: 20, bottom: 20, left: 20 };
+            const margin = { top: 0, right: 0, bottom: 0, left: 0 };
 
             const exceptions = new Set(["of", "the", "and", "in", "on", "at", "for"]);
 
@@ -188,7 +188,7 @@ const ChoroplethMap = ({ onCountrySelect, onSongSelect }) => {
             style={{
                 position: 'relative',
                 width: '80vw', // Adjust based on your needs
-                height: 'calc(80vw * 0.6)', // Adjust based on your needs
+                height: 'calc(80vw * 0.66)', // Adjust based on your needs
                 overflow: 'hidden',
                 margin: '0 auto',
             }}
