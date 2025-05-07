@@ -1,7 +1,7 @@
 country,genre,song name,artist,rating,album_url,track_id
 antarctica,indie rock,how many people,nunatuk,6.5,,
 argentina,indie rock,ratas,homogenica,7.0,https://cdn-images.dzcdn.net/images/cover/8a2531ad9ef62dff7d94a5970e235498/250x250-000000-80-0-0.jpg,2670586682
-argentina,indie rock,turista,homogenica,8.0,https://cdn-images.dzcdn.net/images/cover/3bcea1fe7b55a09387407d8e896bde4c/250x250-000000-80-0-0.jpg,2601476622
+argentina,indie rock,turista,homogenica,8.0,https://cdn-images.dzcdn.net/images/cover/8a2531ad9ef62dff7d94a5970e235498/250x250-000000-80-0-0.jpg,2670586652
 argentina,indie rock,animales,homogenica,8.0,https://cdn-images.dzcdn.net/images/cover/8a2531ad9ef62dff7d94a5970e235498/250x250-000000-80-0-0.jpg,2670586672
 argentina,indie rock,bichos,homogenica,8.5,https://cdn-images.dzcdn.net/images/cover/8a2531ad9ef62dff7d94a5970e235498/250x250-000000-80-0-0.jpg,2670586662
 argentina,indie rock,somniferos,no te me enojes,7.5,https://cdn-images.dzcdn.net/images/cover/2c598760d3613856b12043c980ba8609/250x250-000000-80-0-0.jpg,3287251911
@@ -9,7 +9,7 @@ argentina,indie rock,paraisos mentales,marchitorial,7.5,https://cdn-images.dzcdn
 armenia,rock,the noise is a scream,clocker,6.0,https://cdn-images.dzcdn.net/images/cover/94302d493af6bef3cc053b221711ad95/250x250-000000-80-0-0.jpg,417835702
 aruba,indie rock,stomp,the revoir,8.5,https://cdn-images.dzcdn.net/images/cover/146c97d3990def991dddc21cc1ec5220/250x250-000000-80-0-0.jpg,2422836295
 australia,indie rock,zoom,last dinosaurs,10.0,https://cdn-images.dzcdn.net/images/cover/1e500063a8979afefaba123b68ad4b42/250x250-000000-80-0-0.jpg,16578033
-australia,indie rock,weekend,last dinosaurs,8.0,https://cdn-images.dzcdn.net/images/cover/1e500063a8979afefaba123b68ad4b42/250x250-000000-80-0-0.jpg,16578040
+australia,indie rock,weekend,last dinosaurs,8.0,https://cdn-images.dzcdn.net/images/cover/0db921b8931929b543abc6cdc92e02c2/250x250-000000-80-0-0.jpg,2083566417
 austria,experimental rock,acting moderate,killed by 9v batteries,9.0,https://cdn-images.dzcdn.net/images/cover/2a537a3534339370da26a66122701a24/250x250-000000-80-0-0.jpg,1779933577
 bangladesh,alternative,sheishob din raatri,karnival,8.5,https://cdn-images.dzcdn.net/images/cover/87889d3931b63406d88b322b4cb05e4c/250x250-000000-80-0-0.jpg,947464842
 belarus,alt rock,Дажджамі,Бяз Назвы ,7.5,,
@@ -47,7 +47,7 @@ costa rica,shoegaze,cuarto rosa,sway,7.0,https://cdn-images.dzcdn.net/images/cov
 croatia,psychedelic rock,meke ruke,cuvarkuca,7.0,https://cdn-images.dzcdn.net/images/cover/59c2196864f3e1daf56920281b97add6/250x250-000000-80-0-0.jpg,2030276547
 czechia,experimental rock,sign n spell,here,7.0,https://cdn-images.dzcdn.net/images/cover/b82b7615d3eeb998417ffa12489d94b3/250x250-000000-80-0-0.jpg,61261440
 cuba,shoegaze,no te veo,land whales,8.7,https://cdn-images.dzcdn.net/images/cover/1e424e53d1b4f9e808a0ebba4ae7a1e7/250x250-000000-80-0-0.jpg,2097286837
-denmark,alt rock,fencesitters,inventory,7.0,https://cdn-images.dzcdn.net/images/cover/5a6cf42002c8e92c0ad10c5f8f1d62e9/250x250-000000-80-0-0.jpg,3116768341
+denmark,alt rock,fencesitters,inventory,7.0,https://cdn-images.dzcdn.net/images/cover/844b0ddc8226796eaafcfdd33e84f214/250x250-000000-80-0-0.jpg,3090041221
 united kingdom,indie rock,prunus,new luna,7.5,https://cdn-images.dzcdn.net/images/cover/22d1d4029aa570599b2f90979ec79c29/250x250-000000-80-0-0.jpg,954709762
 ecuador,alt rock,sindrome de uppsala,biorn borg,8.0,https://cdn-images.dzcdn.net/images/cover/067ff5688ef4989b36cdc7fc94c6d9d1/250x250-000000-80-0-0.jpg,67268320
 england,shoegaze,prunus,new luna,8.8,https://cdn-images.dzcdn.net/images/cover/22d1d4029aa570599b2f90979ec79c29/250x250-000000-80-0-0.jpg,954709762
@@ -104,7 +104,7 @@ latvia,alt rock,fabrikas meitenes dziesma,zidruns,5.0,https://cdn-images.dzcdn.n
 latvia,dream pop,i want you,tribes of the city,7.0,https://cdn-images.dzcdn.net/images/cover/8edd05b2a647a3c57370851909b3b08a/250x250-000000-80-0-0.jpg,779976572
 lebanon,shoegaze,feel better,bliss,7.0,https://cdn-images.dzcdn.net/images/cover/776e0d66765700fa654353c6eaba797a/250x250-000000-80-0-0.jpg,2700321072
 luxembourg,alt rock,6th of august,holy national victims,6.5,https://cdn-images.dzcdn.net/images/cover/f8411efac0787e1584a5a432a302b0f2/250x250-000000-80-0-0.jpg,1678163
-malaysia,alt rock,bintang,statik,8.9,https://cdn-images.dzcdn.net/images/cover/d77b25b6f5bdfbd4298fb77ef1fb8e05/250x250-000000-80-0-0.jpg,531674581
+malaysia,alt rock,bintang,statik,8.9,,
 malaysia,alt rock,gelap,statik,8.5,https://cdn-images.dzcdn.net/images/cover/d77b25b6f5bdfbd4298fb77ef1fb8e05/250x250-000000-80-0-0.jpg,531674591
 malaysia,alt rock,dia,statik,7.0,https://cdn-images.dzcdn.net/images/cover/0175ddbd3afc9efb14c2ba884ebad66d/250x250-000000-80-0-0.jpg,2287299637
 malta,prog rock,bloodstream waterfall cannonball,eyes to argus,7.0,https://cdn-images.dzcdn.net/images/cover/89012d82be2a8e22fcda7d3d4267d29c/250x250-000000-80-0-0.jpg,2829256062
@@ -118,12 +118,12 @@ mongolia,rock,tuurugdul,orshihui,7.0,https://cdn-images.dzcdn.net/images/cover/a
 morocco,punk,aisha qandisha,taqbir,7.0,https://cdn-images.dzcdn.net/images/cover/e3f4a1d64ac63267965f262ca4264954/250x250-000000-80-0-0.jpg,1234084492
 morocco,punk,sma3,taqbir,8.0,https://cdn-images.dzcdn.net/images/cover/e3f4a1d64ac63267965f262ca4264954/250x250-000000-80-0-0.jpg,1234084482
 myanmar,rock,chan khae,idiots,9.5,https://cdn-images.dzcdn.net/images/cover/eafeb788d09970b5f2e9114feaf275a0/250x250-000000-80-0-0.jpg,1623805552
-myanmar,rock,a date pal,idiots,8.0,https://cdn-images.dzcdn.net/images/cover/eafeb788d09970b5f2e9114feaf275a0/250x250-000000-80-0-0.jpg,1623805622
+myanmar,rock,a date pal,idiots,8.0,https://cdn-images.dzcdn.net/images/cover/9e0b88a3883e7dd346984083ae0e5611/250x250-000000-80-0-0.jpg,2432609815
 myanmar,rock,htet ma pay nae tot,idiots,8.7,https://cdn-images.dzcdn.net/images/cover/9e0b88a3883e7dd346984083ae0e5611/250x250-000000-80-0-0.jpg,2432609835
 namibia,garage rock,over this,penilane,7.0,https://cdn-images.dzcdn.net/images/cover/2580b3d175ffb5b33942d2c1ecec0cef/250x250-000000-80-0-0.jpg,510291442
 netherlands,rock,summerdaze,daryll-ann,7.8,https://cdn-images.dzcdn.net/images/cover/e8d0a36301258a66a2fa499343687857/250x250-000000-80-0-0.jpg,998577302
 netherlands,indie rock,misery galore,bettie serveert,9.0,,
-netherlands,indie rock,fallen foster,bettie serveert,9.5,https://cdn-images.dzcdn.net/images/cover/59ebad7ddbe3200e7593aab8b5e3769b/250x250-000000-80-0-0.jpg,3293971861
+netherlands,indie rock,fallen foster,bettie serveert,9.5,https://cdn-images.dzcdn.net/images/cover/de23af743c4fd64d1584417e99991e41/250x250-000000-80-0-0.jpg,3101649
 netherlands,indie rock,rudder,bettie serveert,9.0,https://cdn-images.dzcdn.net/images/cover/de23af743c4fd64d1584417e99991e41/250x250-000000-80-0-0.jpg,3101647
 netherlands,indie rock,geek,bettie serveert,8.6,,
 new zealand,indie rock,all i need,bleeding star,8.0,https://cdn-images.dzcdn.net/images/cover/c5e7ae0a62b1988d830cda7960b69d5a/250x250-000000-80-0-0.jpg,2233877027
@@ -140,7 +140,7 @@ philippines,indie rock,the chase,as silent as the forest,8.3,https://cdn-images.
 poland,alt rock,to nie byw film,myslovitz,7.5,https://cdn-images.dzcdn.net/images/cover/7317097ccab3e4f4c4c2385292d805f5/250x250-000000-80-0-0.jpg,950273242
 portugal,indie rock,o vento,los hermanos,8.0,https://cdn-images.dzcdn.net/images/cover/23d3be92940f73ffa1e889d919a0fb19/250x250-000000-80-0-0.jpg,13309062
 portugal,dark wave rock,pale,aenima,8.0,https://cdn-images.dzcdn.net/images/cover/8606263153a95df9830c52774a5b07d7/250x250-000000-80-0-0.jpg,65040530
-russia,alt rock,untitled,franco,8.3,https://cdn-images.dzcdn.net/images/cover/dcbc4fb1a6a76ad0d586a7b8971ac70f/250x250-000000-80-0-0.jpg,1775572877
+russia,alt rock,untitled,franco,8.3,https://cdn-images.dzcdn.net/images/cover/6eaa0d219a9637f1dd1dcac756736fd6/250x250-000000-80-0-0.jpg,1647888342
 russia,math rock,Погребок ,franco,8.3,https://cdn-images.dzcdn.net/images/cover/e125ac1e773f4c73d9680f7c7b79a637/250x250-000000-80-0-0.jpg,3055312421
 saudi arabia,alt rock,mouj al bahar,seera,7.0,https://cdn-images.dzcdn.net/images/cover/dfb03eb3e0aa52c046376bfe13e625b4/250x250-000000-80-0-0.jpg,3108613121
 united kingdom,shoegaze,bliss,dallas love field,8.8,https://cdn-images.dzcdn.net/images/cover/a69a22becc918d0aac356f7fc9969e24/250x250-000000-80-0-0.jpg,3237548101
@@ -170,7 +170,7 @@ sweden,alt rock,if you were here,kent,10.0,https://cdn-images.dzcdn.net/images/c
 sweden,alternative,owc,kent,9.6,https://cdn-images.dzcdn.net/images/cover/6ecf74293cd11f7bab8af2728a0d1a27/250x250-000000-80-0-0.jpg,2324047
 switzerland,alt rock,new in colors,favez,9.0,https://cdn-images.dzcdn.net/images/cover/494f0274bd7d1b931e98a8b7d78926ab/250x250-000000-80-0-0.jpg,1925709197
 switzerland,alt rock,headed for the ocean,favez,8.8,https://cdn-images.dzcdn.net/images/cover/b30aaa30d1da34782b500ed18cf66b55/250x250-000000-80-0-0.jpg,9932525
-switzerland,alt rock,chasing honesty,favez,7.0,https://cdn-images.dzcdn.net/images/cover/d6b43d7315c2fd30c384399b657b46d2/250x250-000000-80-0-0.jpg,1856003057
+switzerland,alt rock,chasing honesty,favez,7.0,https://cdn-images.dzcdn.net/images/cover/c53fa385da7204ee23833a2b46929a6c/250x250-000000-80-0-0.jpg,1925986887
 taiwan,alt rock,爛泥,no party for cao dong,8.5,,
 thailand,pop/indie rock(?),get up,kiki,7.0,https://cdn-images.dzcdn.net/images/cover/b8501252a321f23f9cfe1a5c120e70cf/250x250-000000-80-0-0.jpg,2157466407
 thailand,indie rock,let me go,yonlapa,8.0,https://cdn-images.dzcdn.net/images/cover/2a3a0e5e88a6f15cb9be106472ffa85b/250x250-000000-80-0-0.jpg,2812778442
