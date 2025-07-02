@@ -59,7 +59,7 @@ const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
 
                     <a
                     class='link'
-                    href=""
+                    href="https://www.tunemymusic.com/share/s0boJrQ4Q4"
                     target="_blank"
                     rel="noopener noreferrer"
                     >
