@@ -3,7 +3,10 @@ import React from 'react';
 const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
     return (
         <div id="left-side">
-            <h2>Alt Around the World</h2>
+            <div id="title-container">
+                <h2>Alt Around the World</h2>
+                <img src="/images/logo.png" alt="Logo" />
+            </div>
             <div className="selection-display">
                 {selectedCountry && (
                 <div className="country-selection">
