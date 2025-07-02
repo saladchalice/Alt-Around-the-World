@@ -177,3 +177,12 @@ h3 {
 .disclaimer {
     font-size: 0.8rem;
 }
+
+/* Title container styles */
+#title-container {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Title on the left, logo on the right */
+    align-items: center;
+    gap: 0px;
+    margin-bottom: 10px;
+}

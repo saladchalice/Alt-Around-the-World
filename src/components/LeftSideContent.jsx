@@ -5,7 +5,7 @@ const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
         <div id="left-side">
             <div id="title-container">
                 <h2>Alt Around the World</h2>
-                <img src="/images/logo.png" alt="Logo" />
+                <img src={process.env.PUBLIC_URL + "/images/logo.png"} style={{width: '50px'}} alt="Logo" />
             </div>
             <div className="selection-display">
                 {selectedCountry && (
