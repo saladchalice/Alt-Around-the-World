@@ -31,6 +31,10 @@ p.text{
     font-size:13px;
 }
 
+p.subtitle {
+    margin-left:20px;
+}
+
 #grid-container {
     display: grid;
     grid-template-columns: 1fr 80%; /* Left side takes 1 fraction, right side takes 85% */
@@ -170,6 +174,13 @@ h3 {
     font-size: 1.5rem;
 }
 
+#exploring{
+    color:#9b9b9b;
+    font-weight:300;
+    margin-bottom:0;
+    padding-bottom:0;
+}
+
 .text {
     font-size: 1rem;
 }
@@ -185,4 +196,21 @@ h3 {
     align-items: center;
     gap: 0px;
     margin-bottom: 10px;
+}
+
+#playlist-links {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Title on the left, logo on the right */
+    gap: 0px;
+    margin-top: 20px;
+    padding: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 15px;
+}
+
+.link:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.2s;
 }

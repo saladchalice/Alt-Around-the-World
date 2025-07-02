@@ -10,11 +10,11 @@ const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
             <div className="selection-display">
                 {selectedCountry && (
                 <div className="country-selection">
-                    <h3>Currently Exploring:</h3>
+                    <h3 id="exploring">Currently Exploring:</h3>
                     <h2>{selectedCountry}</h2>
                     {selectedSong && (
                     <div className="song-selection">
-                        <p>Now Playing: <strong>{selectedSong.song}</strong></p>
+                        <p>Selected: <strong>{selectedSong.song}</strong></p>
                         {selectedSong.albumUrl && (
                         <img 
                             src={selectedSong.albumUrl} 
@@ -28,12 +28,56 @@ const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
                 )}
             </div>
 
+            <div id="playlist-links">
+                <a
+                    class = 'link'
+                    href="https://docs.google.com/spreadsheets/d/1IEafrUyNPCkXkxiRKXChc9PNmyM4Ide2TY3NQxFhkmg/edit?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <img
+                        src={process.env.PUBLIC_URL + '/images/sheetslogo.png'}
+                        style={{ height: '40px' }}
+                        alt="Google Sheets"
+                        title="View on Google Sheets"
+                    />
+                    </a>
+
+                    <a
+                    class = 'link'
+                    href="https://www.tunemymusic.com/share/s0boJrQ4Q4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <img
+                        src={process.env.PUBLIC_URL + '/images/deezerlogo.png'}
+                        style={{ height: '40px' }}
+                        alt="Deezer"
+                        title="View on Deezer"
+                    />
+                    </a>
+
+                    <a
+                    class='link'
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <img
+                        src={process.env.PUBLIC_URL + '/images/tiktok.png'}
+                        style={{ height: '40px' }}
+                        alt="Tiktok"
+                        title="View on TikTok, Coming Soon!"
+                    />
+                    </a>
+            </div>
+
             <div className="text-container">
                 <p className="text">
                     For several years, I have been compiling <span id="emphasis">
                     a curated list of indie/alternative rock music from <strong>every country/territory in the world</strong></span>, 
                     with a de-emphasis on large majority-anglophone countries (USA, UK, Australia, NZ).
-                    So far I'm up to 95!
+                    So far I'm up to 102!
                 </p>
                 <p className="text">
                     In the making of this playlist, I've gotten to listen to indie and alternative artists from
