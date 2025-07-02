@@ -1,4 +1,6 @@
 country,genre,song name,artist,rating
+algeria,pop rock (?) ,tlata,amel zen,7.5
+angola,rock,saudade,instinto primario,7.5
 antarctica,indie rock,how many people,nunatuk,6.5
 argentina,indie rock,ratas,homogenica,7
 argentina,indie rock,turista,homogenica,8
@@ -83,6 +85,7 @@ indonesia,indie rock,confused,sunwich,7
 iran,alt rock,saghi,o-hum,7.5
 ireland,alt rock,boys in the better land,fontaines d.c,8
 italy,alt rock,come dovrei oppormi,bymyside,10
+ivory coast,rap rock,stabilise rentabilise,toto le banzou,7
 jamaica,alternative,vex,"dxrkknght, indie anthony",7.5
 japan,midwest emo / alt rock,phony,by the end of the summer,9
 japan,indie rock,glass marbles,susquatch,9
@@ -116,6 +119,8 @@ mexico,indie rock,quemame,apis melifera,7.5
 spain,alt rock,ya no hay verano,depresion sonora,6.5
 mexico,alt rock,miente,bengala,6.5
 mexico,alt rock,eres,cafe tacvba,9
+madagascar,pop rock (?) ,bismak,dillie,8
+madagascar,pop rock (?) ,mandehana-raha mbola hiverina-tsy irery ianao,dillie,7.5
 moldova,rock,cocori,alternosfera,7.5
 moldova,midwest emo,midnorth,Никотиновая Зависимость,6.5
 mongolia,rock,tuurugdul,orshihui,7
@@ -190,7 +195,7 @@ turkey,alt rock,cambaz,mor ve ötesi,8.7
 ukraine,indie rock,Я кусаю щоки,the unsleeping,8
 ukraine,indie rock,Не Сплю,the unsleeping,7.8
 united kingdom,rock,goleuadau llundain,daniel lloyd a mr pinc,8
-United States of America,folk rock,soft stud,black belt eagle scout,7.5
+United States of America,alt rock,dumb,pretty sick,8.5
 uruguay,rock,upside down,astroboy,7.5
 uruguay,rock,al vacio,no te va gustar,8
 uzbekistan,indie rock,Нам не нужны друзья,wladek sheen,7
