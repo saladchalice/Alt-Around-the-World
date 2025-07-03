@@ -72,10 +72,10 @@ const ChoroplethMap = ({ onCountrySelect, onSongSelect }) => {
             const world = await d3.json(process.env.PUBLIC_URL+'/data/countries.geojson');
 
             // search setup
-            const countryOptions = world.features.map((feature) => ({
-                value: feature.properties.ADMIN,
-                label: feature.properties.ADMIN
-            }));
+            // const countryOptions = world.features.map((feature) => ({
+            //     value: feature.properties.ADMIN,
+            //     label: feature.properties.ADMIN
+            // }));
 
             const zoom = d3.zoom()
                 .scaleExtent([1, 8])
