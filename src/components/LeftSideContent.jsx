@@ -48,7 +48,7 @@ const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
                     href="https://www.tunemymusic.com/share/s0boJrQ4Q4"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >
+                    >   
                     <img
                         src={process.env.PUBLIC_URL + '/images/deezerlogo.png'}
                         style={{ height: '40px' }}
