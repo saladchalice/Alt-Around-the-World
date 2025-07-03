@@ -1,13 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
-// import CountrySearch from './CountrySearch';
 import RadialMenu from './RadialMenu';
 
 
 
-
 const ChoroplethMap = ({ onCountrySelect, onSongSelect }) => {
-    const zoomBehavior = d3.zoom();
     const containerRef = useRef();
     const svgRef = useRef();
     const tooltipRef = useRef();
@@ -17,10 +14,6 @@ const ChoroplethMap = ({ onCountrySelect, onSongSelect }) => {
         countryData: null,
         position: { x: 0, y: 0 }
     });
-
-    // states for search
-    // const [selectedCountry, setSelectedCountry] = useState(null);
-    // const [countryOptions, setCountryOptions] = useState([]);
 
     // Handle window resize
      useEffect(() => {
@@ -79,17 +72,12 @@ const ChoroplethMap = ({ onCountrySelect, onSongSelect }) => {
             const world = await d3.json(process.env.PUBLIC_URL+'/data/countries.geojson');
 
             // search setup
-            // const countryOptions = world.features
-            // .map(feature => ({
-            //     value: feature.properties.ADMIN,
-            //     label: feature.properties.ADMIN
-            // }))
-            // .sort((a, b) => a.label.localeCompare(b.label));
+            const countryOptions = world.features.map((feature) => ({
+                value: feature.properties.ADMIN,
+                label: feature.properties.ADMIN
+            }));
 
-            // setCountryOptions(countryOptions);
-
-
-            const zoom = zoomBehavior
+            const zoom = d3.zoom()
                 .scaleExtent([1, 8])
                 .translateExtent([[0, 0], [width, height]])
                 .on('zoom', zoomed);
@@ -173,7 +161,6 @@ const ChoroplethMap = ({ onCountrySelect, onSongSelect }) => {
                 .attr('d', path)
                 .attr('fill', d => {
                     const countryName = d.properties.ADMIN;
-                    // console.log(countryName);
                     return countryStats.has(countryName) ? colorScale(countryStats.get(countryName).count) : '#fff';
                 })
                 .attr('stroke', '#282828')
@@ -198,31 +185,6 @@ const ChoroplethMap = ({ onCountrySelect, onSongSelect }) => {
 
         loadData();
     }, [dimensions, onCountrySelect]);
-
-//    useEffect(() => {
-//         if (!selectedCountry) return;
-
-//         const svg = d3.select(svgRef.current);
-//         const g = svg.select('g'); // Group that holds countries
-//         const allPaths = g.selectAll('.country');
-
-//         // Reset all countries' stroke
-//         allPaths
-//             .attr('stroke', '#282828')
-//             .attr('stroke-width', 0.2);
-
-//         // Highlight selected country
-//         allPaths.each(function(d) {
-//             const isMatch = d && d.properties && d.properties.ADMIN === selectedCountry;
-//             d3.select(this)
-//                 .attr('stroke', isMatch ? 'red' : '#282828')
-//                 .attr('stroke-width', isMatch ? 2 : 0.2);
-//         });
-
-//     }, [selectedCountry, dimensions]);
-
-
-
 
     const closeMenu = () => {
         setMenuState(prev => ({ ...prev, show: false }));
@@ -262,7 +224,7 @@ const ChoroplethMap = ({ onCountrySelect, onSongSelect }) => {
                 position: 'fixed',
                 bottom: '10px',
                 left: '50%',
-                transform: 'translateX(-35%)',
+                transform: 'translateX(-50%)',
                 width: '90%',
                 maxWidth: '800px',
                 backgroundColor: 'rgba(0, 0, 0, 0.4)',
@@ -276,13 +238,8 @@ const ChoroplethMap = ({ onCountrySelect, onSongSelect }) => {
             }}>
                 Hover to select a country, use arrow keys to select a song, press space to play the song, and escape to exit the menu.
             </div>
-            {/* <CountrySearch 
-                countryOptions={countryOptions}
-                onSelectCountry={setSelectedCountry}
-            /> */}
         </div>
     );
-    
 };
 
 export default ChoroplethMap;
