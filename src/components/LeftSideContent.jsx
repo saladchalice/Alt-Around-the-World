@@ -69,7 +69,7 @@ const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
                     rel="noopener noreferrer"
                     >
                     <img
-                        src={process.env.PUBLIC_URL + '/images/sheetslogo.png'}
+                        src={process.env.PUBLIC_URL + '/images/sheets.png'}
                         style={{ height: '40px' }}
                         alt="Google Sheets"
                         title="View on Google Sheets"
@@ -83,7 +83,7 @@ const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
                     rel="noopener noreferrer"
                     >   
                     <img
-                        src={process.env.PUBLIC_URL + '/images/deezerlogo.png'}
+                        src={process.env.PUBLIC_URL + '/images/deezer.png'}
                         style={{ height: '40px' }}
                         alt="Deezer"
                         title="View on Deezer"
