@@ -214,3 +214,7 @@ h3 {
     transform: scale(1.1);
     transition: ease-in-out 0.2s;
 }
+
+.emoji {
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+}

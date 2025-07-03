@@ -1,6 +1,36 @@
-import React from 'react';
+import React, {useEffect, useState } from 'react';
+
+const getFlagUrl = (code) =>
+  code ? `https://flagcdn.com/24x18/${code.toLowerCase()}.png` : '';
 
 const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
+    const [flagUrl, setFlagUrl] = useState('');
+
+    useEffect(() => {
+        if (!selectedCountry) return;
+        const fetchFlag = async () => {
+            try {
+                const response = await fetch(`${process.env.PUBLIC_URL}/data/CountryCodesWithFlags.json`);
+                const data = await response.json();
+
+                const match = data.find(
+                (country) => country.name.toLowerCase() === selectedCountry.toLowerCase()
+                );
+
+                if (match && match.code) {
+                setFlagUrl(getFlagUrl(match.code));
+                } else {
+                setFlagUrl('');
+                }
+            } catch (error) {
+                console.error('Error loading country codes:', error);
+                setFlagUrl('');
+            }
+        };
+
+        fetchFlag();
+    }, [selectedCountry]);
+
     return (
         <div id="left-side">
             <div id="title-container">
@@ -11,7 +41,10 @@ const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
                 {selectedCountry && (
                 <div className="country-selection">
                     <h3 id="exploring">Currently Exploring:</h3>
-                    <h2>{selectedCountry}</h2>
+                    <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                        {selectedCountry}
+                        {flagUrl && <img src={flagUrl} alt={`${selectedCountry} flag`} />}
+                    </h2>
                     {selectedSong && (
                     <div className="song-selection">
                         <p>Selected: <strong>{selectedSong.song}</strong></p>
@@ -30,7 +63,7 @@ const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
 
             <div id="playlist-links">
                 <a
-                    class = 'link'
+                    className='link'
                     href="https://docs.google.com/spreadsheets/d/1IEafrUyNPCkXkxiRKXChc9PNmyM4Ide2TY3NQxFhkmg/edit?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -44,7 +77,7 @@ const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
                     </a>
 
                     <a
-                    class = 'link'
+                    className='link'
                     href="https://www.tunemymusic.com/share/s0boJrQ4Q4"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -58,7 +91,7 @@ const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
                     </a>
 
                     <a
-                    class='link'
+                    className='link'
                     href="https://www.tunemymusic.com/share/s0boJrQ4Q4"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -84,6 +117,9 @@ const LeftSideContent =  ({ selectedCountry, selectedSong }) => {
                      music cultures around the world that I would've never been able to encounter otherwise.
                     Some highlights for me are <strong>Singapore, Kenya, the Faroe Islands, and Peru!</strong>
                 </p>
+                <p className="text">Note: In the case of certain artists, their music is not available on streaming services. 
+                    They can, however, often be located on YouTube, and for any song that I can't display here, I highly recommend throwing them into a Youtube search bar and checking them out
+                    (as in the case of <strong>Dillie from Madagascar, O-Hum of Iran, and arches of China</strong>)</p>
             </div>
             
             <div>
