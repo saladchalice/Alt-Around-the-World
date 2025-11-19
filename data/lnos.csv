@@ -1,6 +1,6 @@
 country,genre,song name,artist,rating
-algeria,pop rock (?) ,tlata,amel zen,7.5
 angola,rock,saudade,instinto primario,7.5
+angola,metal,o ser,m'vula,
 antarctica,indie rock,how many people,nunatuk,6.5
 argentina,indie rock,ratas,homogenica,7
 argentina,indie rock,turista,homogenica,8
@@ -8,6 +8,10 @@ argentina,indie rock,animales,homogenica,8
 argentina,indie rock,bichos,homogenica,8.5
 argentina,indie rock,somniferos,no te me enojes,7.5
 argentina,indie rock,paraisos mentales,marchitorial,7.5
+argentina,noise rock,solo un momento,sunlid,8.5
+argentina,rock,amigo del alma,juan y la suya,7.8
+argentina,indie rock,blood of my blood,jonabug,8
+argentina,rock,ya nada es igual,sunlid,
 armenia,rock,the noise is a scream,clocker,6
 aruba,indie rock,stomp,the revoir,8.5
 australia,indie rock,zoom,last dinosaurs,10
@@ -15,8 +19,9 @@ australia,indie rock,weekend,last dinosaurs,8
 austria,experimental rock,acting moderate,killed by 9v batteries,9
 bangladesh,alternative,sheishob din raatri,karnival,8.5
 belarus,alt rock,Дажджамі,Бяз Назвы ,7.5
-belgium,emo,witching hour,feverchild,8
+belgium,emo,witching hour,feverchild,10
 belgium,shoegaze,glow,slow crush,8
+belgium,emo,hotellounge ( be the death of me),deus,
 bolivia,indie rock,hickey,bloodshock,8.5
 bolivia,rock,histeria,llegas,7
 botswana,noise rock,shooters,internet key,9
@@ -29,6 +34,8 @@ brazil,experimental rock,playboy,pusher174,7
 brazil,shoegaze,de areia e sal,sonhos tomam conta,6
 brazil,shoegaze,hear a whisper,"terraplana, winter",8
 brazil,indie rock,germaboys | a crise do prensado,quem e voce alice,8
+brazil,indie rock,coincidência,key vs. locket,10
+brazil,indie rock,alarmes de incêndio,def,8
 brunei,indie rock,i don't want to go home,guerilla orchestra,7
 bulgaria,alt rock,do mene e mayka ti,TDK,7.5
 cambodia,folk rock,black hair,kampot playboys,7
@@ -43,22 +50,26 @@ canada,alt rock,la monogamie,malajube,8
 cabo verde,indie rock,sinti alive,krad,6.9
 chile,math rock,resonancias,herbario,7
 chile,rock,el viaje,coni lewin,7.5
+chile,noise rock,desaparacen (dias sin placer),el purpurado de charol,7
 china,noise rock,disco,riot in school,8
 china,alternative,光,arches,7
 china,shoegaze,i just want 2 hear your voice...,strawberry lust,7
 colombia,emo,become,the hall effect,7
 costa rica,shoegaze,cuarto rosa,sway,7
 croatia,psychedelic rock,meke ruke,cuvarkuca,7
+croatia,rock,bez tebe,detour,8
 czechia,experimental rock,sign n spell,here,7
 cuba,shoegaze,no te veo,land whales,8.7
 denmark,alt rock,fencesitters,inventory,7
+dominican republic,shoegaze,sigue sigue no pares,vestidos,7.5
 united kingdom,indie rock,prunus,new luna,7.5
 ecuador,alt rock,sindrome de uppsala,biorn borg,8
 england,shoegaze,prunus,new luna,8.8
 egypt,alt rock,segn bel alwan,"ramy essam, malikah",8
 el salvador,indie rock,color,inflorescencia,6.7
 faroe islands,alt rock,indigo brow,clickhaze,10
-finland,symphonic metal,amaranth,nightwish,7
+finland,alt rock,006,apulanta,7
+finland,emo,join me in death,him,9
 france,indie rock,lasso,phoenix,7
 france,rock,reggie lewis,sport,6
 france,indie rock,armistice,phoenix,8
@@ -84,6 +95,7 @@ indonesia,indie rock,checks and calls,liar's wife,8
 indonesia,indie rock,confused,sunwich,7
 iran,alt rock,saghi,o-hum,7.5
 ireland,alt rock,boys in the better land,fontaines d.c,8
+ireland,alt rock,jackie down the line,fontaines d.c,10
 italy,alt rock,come dovrei oppormi,bymyside,10
 ivory coast,rap rock,stabilise rentabilise,toto le banzou,7
 jamaica,alternative,vex,"dxrkknght, indie anthony",7.5
@@ -119,13 +131,14 @@ mexico,indie rock,quemame,apis melifera,7.5
 spain,alt rock,ya no hay verano,depresion sonora,6.5
 mexico,alt rock,miente,bengala,6.5
 mexico,alt rock,eres,cafe tacvba,9
-madagascar,pop rock (?) ,bismak,dillie,8
-madagascar,pop rock (?) ,mandehana-raha mbola hiverina-tsy irery ianao,dillie,7.5
+madagascar,rock,hifaliako,bismak,8
+madagascar,rock,un petit bonheur de la vie,bismak,7.5
 moldova,rock,cocori,alternosfera,7.5
 moldova,midwest emo,midnorth,Никотиновая Зависимость,6.5
 mongolia,rock,tuurugdul,orshihui,7
 morocco,punk,aisha qandisha,taqbir,7
 morocco,punk,sma3,taqbir,8
+mozambique,rock,nevoa de deserto,pfumela,
 myanmar,rock,chan khae,idiots,9.5
 myanmar,rock,a date pal,idiots,8
 myanmar,rock,htet ma pay nae tot,idiots,8.7
@@ -139,6 +152,7 @@ new zealand,indie rock,all i need,bleeding star,8
 north macedonia,alt rock,peski nakaj doma,Дивоградба (divogradka),9
 nigeria,rock,amin,clayrocksu,6.7
 nigeria,rock,oge,clayrocksu,7
+nigeria,rock,arike (kunmie),clayrocksu,8
 norway,indie rock,pie in the sky,drape,7.5
 pakistan,shoegaze,children,//orangenoise,8.8
 paraguay,shoegaze,erratico,rosefield,7
@@ -147,9 +161,11 @@ peru,math rock,satisfuckcion,procrastinacion 1 yo 0,7
 peru,math rock,dos,procrastinacion 1 yo 0,7
 philippines,indie rock,the chase,as silent as the forest,8.3
 poland,alt rock,to nie byw film,myslovitz,7.5
+poland,indie rock,serio,tiul,8
 portugal,indie rock,o vento,los hermanos,8
 portugal,dark wave rock,pale,aenima,8
 romania,indie rock,stem cell research,cardinal,7.5
+romania,indie rock,black holes,vertical ego,7.5
 russia,alt rock,untitled,franco,8.3
 russia,math rock,Погребок ,franco,8.3
 saudi arabia,alt rock,mouj al bahar,seera,7
@@ -167,6 +183,8 @@ singapore,midwest emo  ,fruitcake ,subsonic eye,9
 singapore,alternative,best friend,blush,8.8
 singapore,midwest emo,stranded,subsonic eye,8.6
 singapore,midwest emo,cabin fever,subsonic eye,8.8
+singapore,midwest emo,dijangka,subsonic eye,9
+singapore,midwest emo,matahari,subsonic eye,8
 south africa,pop rock (?) ,cokehead,internet girl,9.5
 south korea,alternative,go back,se so neon,9
 south korea,indie rock,there there,crystal tea,8.5
@@ -188,6 +206,7 @@ thailand,indie rock,let me go,yonlapa,8
 thailand,indie rock,i'm just like that,yonlapa,7.8
 tunisia,shoegaze,sleep cycle,retrieval,7
 tunisia,shoegaze,away,retrieval,7
+tunisia,shoegaze,faded dreamscape,glasswing butterfly,8
 turkey,alt rock,bir kadın Çizeceksin,maNga,10
 turkey,alt rock,kapkaç,maNga,8.8
 turkey,alt rock,dünyanın sonuna doğmuşum,maNga,7.7
@@ -202,4 +221,5 @@ uzbekistan,indie rock,Нам не нужны друзья,wladek sheen,7
 venezuela,sifri rock,retroceder,los mesoneros,6.5
 vietnam,indie rock,hay la,"tora drums, hoanghieu, drumc",8.5
 vietnam,indie rock,nho em,do it dad,9
+yemen,indie rock,soomood,soomood,9
 zimbabwe,rock,place called home,evicted,7
