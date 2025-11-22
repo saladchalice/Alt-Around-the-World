@@ -1,6 +1,6 @@
 country,genre,song name,artist,rating,album_url,track_id
 angola,rock,saudade,instinto primario,7.5,https://cdn-images.dzcdn.net/images/cover/5a2fc93f29f714161827ce2466534b8b/250x250-000000-80-0-0.jpg,2130947457
-angola,metal,o ser,m'vula,,,
+angola,metal,o ser,m'vula,,https://cdn-images.dzcdn.net/images/cover/a102cc679ebf424bdb36bf6cbdba69b2/250x250-000000-80-0-0.jpg,70756780
 antarctica,indie rock,how many people,nunatuk,6.5,,
 argentina,indie rock,ratas,homogenica,7.0,https://cdn-images.dzcdn.net/images/cover/8a2531ad9ef62dff7d94a5970e235498/250x250-000000-80-0-0.jpg,2670586682
 argentina,indie rock,turista,homogenica,8.0,https://cdn-images.dzcdn.net/images/cover/8a2531ad9ef62dff7d94a5970e235498/250x250-000000-80-0-0.jpg,2670586652
@@ -32,7 +32,7 @@ brazil,indie/garage rock,fotos de uma arvore que nao parace bem,micondria,8.0,,
 brazil,indie rock,i luv u franklyn,glover.,7.0,https://cdn-images.dzcdn.net/images/cover/c13f650d3e8366bba50ec8a2cbae2c51/250x250-000000-80-0-0.jpg,1534416762
 brazil,experimental rock,playboy,pusher174,7.0,https://cdn-images.dzcdn.net/images/cover/4f2e8f218c1492f0936c9ae85e03fcdd/250x250-000000-80-0-0.jpg,3557770241
 brazil,shoegaze,de areia e sal,sonhos tomam conta,6.0,https://cdn-images.dzcdn.net/images/cover/4db3fcc0e3a63758ce418443061a30f7/250x250-000000-80-0-0.jpg,2715134502
-brazil,shoegaze,hear a whisper,"terraplana, winter",8.0,https://cdn-images.dzcdn.net/images/cover/91d27f56cf04ab7e1b81771b1adbdf77/250x250-000000-80-0-0.jpg,3190772341
+brazil,shoegaze,hear a whisper,"terraplana, winter",8.0,https://cdn-images.dzcdn.net/images/cover/a35ba72c2ff1ff70f8a7a1330e5217b2/250x250-000000-80-0-0.jpg,3190780191
 brazil,indie rock,germaboys | a crise do prensado,quem e voce alice,8.0,https://cdn-images.dzcdn.net/images/cover/00efd572fdd1a338ecce31aaeb0aca70/250x250-000000-80-0-0.jpg,2535852651
 brazil,indie rock,coincidência,key vs. locket,10.0,https://cdn-images.dzcdn.net/images/cover/2b2cbbc9f3813eac8ec89451c5fcc746/250x250-000000-80-0-0.jpg,3237608971
 brazil,indie rock,alarmes de incêndio,def,8.0,https://cdn-images.dzcdn.net/images/cover/0125d21d0db65a21c726be9783ff2af7/250x250-000000-80-0-0.jpg,3246635601
@@ -145,7 +145,7 @@ myanmar,rock,htet ma pay nae tot,idiots,8.7,https://cdn-images.dzcdn.net/images/
 namibia,garage rock,over this,penilane,7.0,https://cdn-images.dzcdn.net/images/cover/2580b3d175ffb5b33942d2c1ecec0cef/250x250-000000-80-0-0.jpg,510291442
 netherlands,rock,summerdaze,daryll-ann,7.8,https://cdn-images.dzcdn.net/images/cover/e8d0a36301258a66a2fa499343687857/250x250-000000-80-0-0.jpg,998577302
 netherlands,indie rock,misery galore,bettie serveert,9.0,https://cdn-images.dzcdn.net/images/cover/de23af743c4fd64d1584417e99991e41/250x250-000000-80-0-0.jpg,3101644
-netherlands,indie rock,fallen foster,bettie serveert,9.5,https://cdn-images.dzcdn.net/images/cover/59ebad7ddbe3200e7593aab8b5e3769b/250x250-000000-80-0-0.jpg,3293971861
+netherlands,indie rock,fallen foster,bettie serveert,9.5,https://cdn-images.dzcdn.net/images/cover/de23af743c4fd64d1584417e99991e41/250x250-000000-80-0-0.jpg,3101649
 netherlands,indie rock,rudder,bettie serveert,9.0,https://cdn-images.dzcdn.net/images/cover/de23af743c4fd64d1584417e99991e41/250x250-000000-80-0-0.jpg,3101647
 netherlands,indie rock,geek,bettie serveert,8.6,https://cdn-images.dzcdn.net/images/cover/de23af743c4fd64d1584417e99991e41/250x250-000000-80-0-0.jpg,3101639
 new zealand,indie rock,all i need,bleeding star,8.0,https://cdn-images.dzcdn.net/images/cover/c5e7ae0a62b1988d830cda7960b69d5a/250x250-000000-80-0-0.jpg,2233877027
