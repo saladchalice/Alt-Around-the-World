@@ -1,6 +1,6 @@
 country,genre,song name,artist,rating,album_url,track_id
 angola,rock,saudade,instinto primario,7.5,https://cdn-images.dzcdn.net/images/cover/5a2fc93f29f714161827ce2466534b8b/250x250-000000-80-0-0.jpg,2130947457
-angola,metal,o ser,m'vula,,https://cdn-images.dzcdn.net/images/cover/e78a15536a256a1c582e0ad3d81da6d0/250x250-000000-80-0-0.jpg,3247410251
+angola,metal,o ser,m'vula,,,
 antarctica,indie rock,how many people,nunatuk,6.5,,
 argentina,indie rock,ratas,homogenica,7.0,https://cdn-images.dzcdn.net/images/cover/8a2531ad9ef62dff7d94a5970e235498/250x250-000000-80-0-0.jpg,2670586682
 argentina,indie rock,turista,homogenica,8.0,https://cdn-images.dzcdn.net/images/cover/8a2531ad9ef62dff7d94a5970e235498/250x250-000000-80-0-0.jpg,2670586652
@@ -27,7 +27,7 @@ bolivia,rock,histeria,llegas,7.0,https://cdn-images.dzcdn.net/images/cover/40991
 botswana,noise rock,shooters,internet key,9.0,,
 botswana,noise rock,bathroom wall,internet key,8.0,,
 botswana,noise rock,i could cut out my veins,internet key,8.8,https://cdn-images.dzcdn.net/images/cover/06f64fd56cd5db149aa7f235992ee905/250x250-000000-80-0-0.jpg,2822720672
-brazil,punk,empina o fuzil // power trip,isotopxs,8.0,https://cdn-images.dzcdn.net/images/cover/6e7f2367078f92f4f4a369420b49cc0b/250x250-000000-80-0-0.jpg,2724464472
+brazil,punk,empina o fuzil // power trip,isotopxs,8.0,https://cdn-images.dzcdn.net/images/cover/349916ab206a7ddc156f98bec2b8c837/250x250-000000-80-0-0.jpg,3191442011
 brazil,indie/garage rock,fotos de uma arvore que nao parace bem,micondria,8.0,,
 brazil,indie rock,i luv u franklyn,glover.,7.0,https://cdn-images.dzcdn.net/images/cover/c13f650d3e8366bba50ec8a2cbae2c51/250x250-000000-80-0-0.jpg,1534416762
 brazil,experimental rock,playboy,pusher174,7.0,https://cdn-images.dzcdn.net/images/cover/4f2e8f218c1492f0936c9ae85e03fcdd/250x250-000000-80-0-0.jpg,3557770241
@@ -103,7 +103,7 @@ japan,midwest emo / alt rock,phony,by the end of the summer,9.0,https://cdn-imag
 japan,indie rock,glass marbles,susquatch,9.0,https://cdn-images.dzcdn.net/images/cover/a2bda69c55e4c9ddbb6fee83c7761b10/250x250-000000-80-0-0.jpg,1880645647
 japan,indie rock,pretty old man,no buses,9.0,https://cdn-images.dzcdn.net/images/cover/4512231fb3261a3d043b9c987e443114/250x250-000000-80-0-0.jpg,665642442
 japan,indie rock,untouchable you,no buses,9.0,https://cdn-images.dzcdn.net/images/cover/0a59c2be82f451177c5e1f62be7ab951/250x250-000000-80-0-0.jpg,748776172
-japan,indie rock,schrodinger's cat,brian the sun,9.0,https://cdn-images.dzcdn.net/images/cover/e75f966094fff898704e62f8c1d242bc/250x250-000000-80-0-0.jpg,1585669192
+japan,indie rock,schrodinger's cat,brian the sun,9.0,,
 japan,indie rock,心の実,indigo la end,9.5,,
 japan,indie rock,girl,no buses,9.5,https://cdn-images.dzcdn.net/images/cover/1c1760ca5ca2e9cb71b00697aa65810d/250x250-000000-80-0-0.jpg,601672582
 japan,indie rock,with or without it,no buses,9.5,https://cdn-images.dzcdn.net/images/cover/1399c43f914bd441205a507086e119b1/250x250-000000-80-0-0.jpg,680880812
@@ -123,7 +123,7 @@ lebanon,shoegaze,feel better,bliss,7.0,https://cdn-images.dzcdn.net/images/cover
 luxembourg,alt rock,6th of august,holy national victims,6.5,https://cdn-images.dzcdn.net/images/cover/f8411efac0787e1584a5a432a302b0f2/250x250-000000-80-0-0.jpg,1678163
 malaysia,alt rock,bintang,statik,8.9,https://cdn-images.dzcdn.net/images/cover/d77b25b6f5bdfbd4298fb77ef1fb8e05/250x250-000000-80-0-0.jpg,531674581
 malaysia,alt rock,gelap,statik,8.5,https://cdn-images.dzcdn.net/images/cover/d77b25b6f5bdfbd4298fb77ef1fb8e05/250x250-000000-80-0-0.jpg,531674591
-malaysia,alt rock,dia,statik,7.0,,
+malaysia,alt rock,dia,statik,7.0,https://cdn-images.dzcdn.net/images/cover/0175ddbd3afc9efb14c2ba884ebad66d/250x250-000000-80-0-0.jpg,2287299637
 malta,prog rock,bloodstream waterfall cannonball,eyes to argus,7.0,https://cdn-images.dzcdn.net/images/cover/607c9ee368a343198198a5cdb9ad24d6/250x250-000000-80-0-0.jpg,2892579332
 mexico,experimental rock,deaberdis o'damentis,thou art death,10.0,https://cdn-images.dzcdn.net/images/cover/ad3a2aa2af5fd99fc3166a714eec4505/250x250-000000-80-0-0.jpg,2234908397
 mexico,indie rock,quizas no llames despues,"gusstav, joan page",7.5,https://cdn-images.dzcdn.net/images/cover/8daca3ba8987a896735735057921b699/250x250-000000-80-0-0.jpg,2319942185
@@ -196,7 +196,7 @@ sweden,alt rock,i wanna be your secret,minute,8.5,https://cdn-images.dzcdn.net/i
 sweden,noise rock,tärd,trachimbod,10.0,https://cdn-images.dzcdn.net/images/cover/9c1a94f2861a274bc7a294fb668288cf/250x250-000000-80-0-0.jpg,349653951
 sweden,alt rock,things she said,kent,10.0,https://cdn-images.dzcdn.net/images/cover/6ecf74293cd11f7bab8af2728a0d1a27/250x250-000000-80-0-0.jpg,2324046
 sweden,alt rock,if you were here,kent,10.0,https://cdn-images.dzcdn.net/images/cover/6ecf74293cd11f7bab8af2728a0d1a27/250x250-000000-80-0-0.jpg,2324092
-sweden,alternative,owc,kent,9.6,https://cdn-images.dzcdn.net/images/cover/6ecf74293cd11f7bab8af2728a0d1a27/250x250-000000-80-0-0.jpg,2324047
+sweden,alternative,owc,kent,9.6,https://cdn-images.dzcdn.net/images/cover/6ecf74293cd11f7bab8af2728a0d1a27/250x250-000000-80-0-0.jpg,7861127
 switzerland,alt rock,new in colors,favez,9.0,,
 switzerland,alt rock,headed for the ocean,favez,8.8,,
 switzerland,alt rock,chasing honesty,favez,7.0,https://cdn-images.dzcdn.net/images/cover/b30aaa30d1da34782b500ed18cf66b55/250x250-000000-80-0-0.jpg,9932539
