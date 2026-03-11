@@ -1,6 +1,6 @@
 country,genre,song name,artist,rating,album_url,track_id
 angola,rock,saudade,instinto primario,7.5,https://cdn-images.dzcdn.net/images/cover/5a2fc93f29f714161827ce2466534b8b/250x250-000000-80-0-0.jpg,2130947457
-angola,metal,o ser,m'vula,,,
+angola,metal,o ser,m'vula,,https://cdn-images.dzcdn.net/images/cover/e78a15536a256a1c582e0ad3d81da6d0/250x250-000000-80-0-0.jpg,3247410251
 antarctica,indie rock,how many people,nunatuk,6.5,,
 argentina,indie rock,ratas,homogenica,7.0,https://cdn-images.dzcdn.net/images/cover/8a2531ad9ef62dff7d94a5970e235498/250x250-000000-80-0-0.jpg,2670586682
 argentina,indie rock,turista,homogenica,8.0,https://cdn-images.dzcdn.net/images/cover/8a2531ad9ef62dff7d94a5970e235498/250x250-000000-80-0-0.jpg,2670586652
@@ -18,12 +18,12 @@ australia,indie rock,zoom,last dinosaurs,10.0,https://cdn-images.dzcdn.net/image
 australia,indie rock,weekend,last dinosaurs,8.0,https://cdn-images.dzcdn.net/images/cover/1e500063a8979afefaba123b68ad4b42/250x250-000000-80-0-0.jpg,16578040
 austria,experimental rock,acting moderate,killed by 9v batteries,9.0,https://cdn-images.dzcdn.net/images/cover/2a537a3534339370da26a66122701a24/250x250-000000-80-0-0.jpg,1779933577
 bangladesh,alternative,sheishob din raatri,karnival,8.5,https://cdn-images.dzcdn.net/images/cover/e794da5ac6a7e0d7ffc0cc04d34d453c/250x250-000000-80-0-0.jpg,3833160611
-belarus,alt rock,Дажджамі,Бяз Назвы ,7.5,https://cdn-images.dzcdn.net/images/cover/adad2d8f4be4979383638bf834bdf35f/250x250-000000-80-0-0.jpg,559505052
+belarus,alt rock,Дажджамі,Бяз Назвы ,7.5,,
 belgium,emo,witching hour,feverchild,10.0,https://cdn-images.dzcdn.net/images/cover/496411b9698110635aaf8a0eefb06fc2/250x250-000000-80-0-0.jpg,2360640275
 belgium,shoegaze,glow,slow crush,8.0,https://cdn-images.dzcdn.net/images/cover/2137f965afecc021bc5e5ed769b82380/250x250-000000-80-0-0.jpg,1082550292
 belgium,emo,hotellounge ( be the death of me),deus,,https://cdn-images.dzcdn.net/images/cover/dc91cd26d1d404415ac9d616a899a6da/250x250-000000-80-0-0.jpg,88818683
 bolivia,indie rock,hickey,bloodshock,8.5,,
-bolivia,rock,histeria,llegas,7.0,,
+bolivia,rock,histeria,llegas,7.0,https://cdn-images.dzcdn.net/images/cover/409916d63819e69f07379cde968fa72d/250x250-000000-80-0-0.jpg,110057038
 botswana,noise rock,shooters,internet key,9.0,,
 botswana,noise rock,bathroom wall,internet key,8.0,,
 botswana,noise rock,i could cut out my veins,internet key,8.8,https://cdn-images.dzcdn.net/images/cover/06f64fd56cd5db149aa7f235992ee905/250x250-000000-80-0-0.jpg,2822720672
@@ -119,7 +119,7 @@ kyrgyzstan,pop rock (?) ,Город-точка,Город 312,7.0,,
 latvia,experimental rock,pulkstens,mazi smirdigie kocini,7.0,,
 latvia,alt rock,fabrikas meitenes dziesma,zidruns,5.0,https://cdn-images.dzcdn.net/images/cover/dda718ae370e4c088b8dc13638e6ce55/250x250-000000-80-0-0.jpg,942980212
 latvia,dream pop,i want you,tribes of the city,7.0,https://cdn-images.dzcdn.net/images/cover/8edd05b2a647a3c57370851909b3b08a/250x250-000000-80-0-0.jpg,779976572
-lebanon,shoegaze,feel better,bliss,7.0,https://cdn-images.dzcdn.net/images/cover/effc062a88309ce866fd98a68aecf007/250x250-000000-80-0-0.jpg,2444029315
+lebanon,shoegaze,feel better,bliss,7.0,https://cdn-images.dzcdn.net/images/cover/10dc427ba65cddc4857cf2669319f6e2/250x250-000000-80-0-0.jpg,3791958682
 luxembourg,alt rock,6th of august,holy national victims,6.5,https://cdn-images.dzcdn.net/images/cover/f8411efac0787e1584a5a432a302b0f2/250x250-000000-80-0-0.jpg,1678163
 malaysia,alt rock,bintang,statik,8.9,https://cdn-images.dzcdn.net/images/cover/d77b25b6f5bdfbd4298fb77ef1fb8e05/250x250-000000-80-0-0.jpg,531674581
 malaysia,alt rock,gelap,statik,8.5,https://cdn-images.dzcdn.net/images/cover/d77b25b6f5bdfbd4298fb77ef1fb8e05/250x250-000000-80-0-0.jpg,531674591
@@ -174,7 +174,7 @@ republic of serbia,indie rock,svet se menja,proto tip,6.0,https://cdn-images.dzc
 slovakia,indie rock,smazka,pipesh,7.7,https://cdn-images.dzcdn.net/images/cover/b68e5ead1afaed86b3f986689f6790aa/250x250-000000-80-0-0.jpg,2869015032
 slovenia,indie rock,umazane misli,joker out,7.5,https://cdn-images.dzcdn.net/images/cover/d89a4829bddb94aa9ce752988c548c4d/250x250-000000-80-0-0.jpg,2483700801
 slovenia,indie rock,omni,before time,7.0,https://cdn-images.dzcdn.net/images/cover/8cb2ee24a4d4f2d5780b5ea3f54b83b8/250x250-000000-80-0-0.jpg,2056584027
-spain,alt rock,truce,belako,8.9,https://cdn-images.dzcdn.net/images/cover/6d7f6a4a8356f22a37af6f1f47222aca/250x250-000000-80-0-0.jpg,3783480212
+spain,alt rock,truce,belako,8.9,https://cdn-images.dzcdn.net/images/cover/d8d164d7dec6835a3f235b1bcd4c108a/250x250-000000-80-0-0.jpg,3788165402
 spain,alt rock,saguzarren kanta,belako,8.9,https://cdn-images.dzcdn.net/images/cover/f86bb6627695bef0504b94de8fe4936a/250x250-000000-80-0-0.jpg,3788156372
 singapore,indie rock,jazz ruined my life,forests,9.5,https://cdn-images.dzcdn.net/images/cover/fab46b37dee0cf62b9fb1cf7d95af39d/250x250-000000-80-0-0.jpg,1733965587
 singapore,indie rock,fool of hell,forests,8.0,https://cdn-images.dzcdn.net/images/cover/fab46b37dee0cf62b9fb1cf7d95af39d/250x250-000000-80-0-0.jpg,1733965537
@@ -216,7 +216,7 @@ ukraine,indie rock,Не Сплю,the unsleeping,7.8,https://cdn-images.dzcdn.net
 united kingdom,rock,goleuadau llundain,daniel lloyd a mr pinc,8.0,https://cdn-images.dzcdn.net/images/cover/b6fc92c279cfa578fb931edb3396be0a/250x250-000000-80-0-0.jpg,9892328
 United States of America,alt rock,dumb,pretty sick,8.5,https://cdn-images.dzcdn.net/images/cover/a0546757db979e28c46205c4cbd040ef/250x250-000000-80-0-0.jpg,1064057742
 uruguay,rock,upside down,astroboy,7.5,https://cdn-images.dzcdn.net/images/cover/6ae8822a26b47a16196cff531a33eee7/250x250-000000-80-0-0.jpg,3713784052
-uruguay,rock,al vacio,no te va gustar,8.0,https://cdn-images.dzcdn.net/images/cover/0d14f6b96136cafd05bbcbf39553bc76/250x250-000000-80-0-0.jpg,11683775
+uruguay,rock,al vacio,no te va gustar,8.0,https://cdn-images.dzcdn.net/images/cover/8b1c418af38b7b5b368f62adf3d584e9/250x250-000000-80-0-0.jpg,661625442
 uzbekistan,indie rock,Нам не нужны друзья,wladek sheen,7.0,https://cdn-images.dzcdn.net/images/cover/ffb41c88408bbeee649bc01ed4eab0f9/250x250-000000-80-0-0.jpg,3759008912
 venezuela,sifri rock,retroceder,los mesoneros,6.5,https://cdn-images.dzcdn.net/images/cover/e838f907139d93d0c73ebd5bf15928f9/250x250-000000-80-0-0.jpg,2383199865
 vietnam,indie rock,hay la,"tora drums, hoanghieu, drumc",8.5,,
