@@ -1,6 +1,6 @@
 country,genre,song name,artist,rating,album_url,track_id
 angola,rock,saudade,instinto primario,7.5,https://cdn-images.dzcdn.net/images/cover/5a2fc93f29f714161827ce2466534b8b/250x250-000000-80-0-0.jpg,2130947457
-angola,metal,o ser,m'vula,,https://cdn-images.dzcdn.net/images/cover/e78a15536a256a1c582e0ad3d81da6d0/250x250-000000-80-0-0.jpg,3247410251
+angola,metal,o ser,m'vula,,,
 antarctica,indie rock,how many people,nunatuk,6.5,,
 argentina,indie rock,ratas,homogenica,7.0,https://cdn-images.dzcdn.net/images/cover/8a2531ad9ef62dff7d94a5970e235498/250x250-000000-80-0-0.jpg,2670586682
 argentina,indie rock,turista,homogenica,8.0,https://cdn-images.dzcdn.net/images/cover/8a2531ad9ef62dff7d94a5970e235498/250x250-000000-80-0-0.jpg,2670586652
@@ -32,7 +32,7 @@ brazil,indie/garage rock,fotos de uma arvore que nao parace bem,micondria,8.0,,
 brazil,indie rock,i luv u franklyn,glover.,7.0,https://cdn-images.dzcdn.net/images/cover/c13f650d3e8366bba50ec8a2cbae2c51/250x250-000000-80-0-0.jpg,1534416762
 brazil,experimental rock,playboy,pusher174,7.0,https://cdn-images.dzcdn.net/images/cover/4f2e8f218c1492f0936c9ae85e03fcdd/250x250-000000-80-0-0.jpg,3557770241
 brazil,shoegaze,de areia e sal,sonhos tomam conta,6.0,https://cdn-images.dzcdn.net/images/cover/4db3fcc0e3a63758ce418443061a30f7/250x250-000000-80-0-0.jpg,2715134502
-brazil,shoegaze,hear a whisper,"terraplana, winter",8.0,https://cdn-images.dzcdn.net/images/cover/91d27f56cf04ab7e1b81771b1adbdf77/250x250-000000-80-0-0.jpg,3190772341
+brazil,shoegaze,hear a whisper,"terraplana, winter",8.0,https://cdn-images.dzcdn.net/images/cover/a35ba72c2ff1ff70f8a7a1330e5217b2/250x250-000000-80-0-0.jpg,3190780191
 brazil,indie rock,germaboys | a crise do prensado,quem e voce alice,8.0,https://cdn-images.dzcdn.net/images/cover/00efd572fdd1a338ecce31aaeb0aca70/250x250-000000-80-0-0.jpg,2535852651
 brazil,indie rock,coincidência,key vs. locket,10.0,https://cdn-images.dzcdn.net/images/cover/2b2cbbc9f3813eac8ec89451c5fcc746/250x250-000000-80-0-0.jpg,3237608971
 brazil,indie rock,alarmes de incêndio,def,8.0,https://cdn-images.dzcdn.net/images/cover/0125d21d0db65a21c726be9783ff2af7/250x250-000000-80-0-0.jpg,3246635601
@@ -100,7 +100,7 @@ italy,alt rock,come dovrei oppormi,bymyside,10.0,https://cdn-images.dzcdn.net/im
 ivory coast,rap rock,stabilise rentabilise,toto le banzou,7.0,https://cdn-images.dzcdn.net/images/cover/9e605a6561cf6dc6c9c79cbe6ec79258/250x250-000000-80-0-0.jpg,3302088231
 jamaica,alternative,vex,"dxrkknght, indie anthony",7.5,https://cdn-images.dzcdn.net/images/cover/ac55760c6be0457f51ec0883f4765d6f/250x250-000000-80-0-0.jpg,2487810191
 japan,midwest emo / alt rock,phony,by the end of the summer,9.0,https://cdn-images.dzcdn.net/images/cover/469b768cb6878d37a797edc57cffab80/250x250-000000-80-0-0.jpg,2258807337
-japan,indie rock,glass marbles,susquatch,9.0,https://cdn-images.dzcdn.net/images/cover/a2bda69c55e4c9ddbb6fee83c7761b10/250x250-000000-80-0-0.jpg,1880645647
+japan,indie rock,glass marbles,susquatch,9.0,https://cdn-images.dzcdn.net/images/cover/379f1a391ec3ccc6dcfce2b548542325/250x250-000000-80-0-0.jpg,1268692972
 japan,indie rock,pretty old man,no buses,9.0,https://cdn-images.dzcdn.net/images/cover/4512231fb3261a3d043b9c987e443114/250x250-000000-80-0-0.jpg,665642442
 japan,indie rock,untouchable you,no buses,9.0,https://cdn-images.dzcdn.net/images/cover/0a59c2be82f451177c5e1f62be7ab951/250x250-000000-80-0-0.jpg,748776172
 japan,indie rock,schrodinger's cat,brian the sun,9.0,,
@@ -119,7 +119,7 @@ kyrgyzstan,pop rock (?) ,Город-точка,Город 312,7.0,,
 latvia,experimental rock,pulkstens,mazi smirdigie kocini,7.0,,
 latvia,alt rock,fabrikas meitenes dziesma,zidruns,5.0,https://cdn-images.dzcdn.net/images/cover/dda718ae370e4c088b8dc13638e6ce55/250x250-000000-80-0-0.jpg,942980212
 latvia,dream pop,i want you,tribes of the city,7.0,https://cdn-images.dzcdn.net/images/cover/8edd05b2a647a3c57370851909b3b08a/250x250-000000-80-0-0.jpg,779976572
-lebanon,shoegaze,feel better,bliss,7.0,https://cdn-images.dzcdn.net/images/cover/10dc427ba65cddc4857cf2669319f6e2/250x250-000000-80-0-0.jpg,3791958682
+lebanon,shoegaze,feel better,bliss,7.0,https://cdn-images.dzcdn.net/images/cover/effc062a88309ce866fd98a68aecf007/250x250-000000-80-0-0.jpg,2444029315
 luxembourg,alt rock,6th of august,holy national victims,6.5,https://cdn-images.dzcdn.net/images/cover/f8411efac0787e1584a5a432a302b0f2/250x250-000000-80-0-0.jpg,1678163
 malaysia,alt rock,bintang,statik,8.9,https://cdn-images.dzcdn.net/images/cover/d77b25b6f5bdfbd4298fb77ef1fb8e05/250x250-000000-80-0-0.jpg,531674581
 malaysia,alt rock,gelap,statik,8.5,https://cdn-images.dzcdn.net/images/cover/d77b25b6f5bdfbd4298fb77ef1fb8e05/250x250-000000-80-0-0.jpg,531674591
@@ -163,7 +163,7 @@ philippines,indie rock,the chase,as silent as the forest,8.3,https://cdn-images.
 poland,alt rock,to nie byw film,myslovitz,7.5,https://cdn-images.dzcdn.net/images/cover/7317097ccab3e4f4c4c2385292d805f5/250x250-000000-80-0-0.jpg,950273242
 poland,indie rock,serio,tiul,8.0,,
 portugal,indie rock,o vento,los hermanos,8.0,https://cdn-images.dzcdn.net/images/cover/23d3be92940f73ffa1e889d919a0fb19/250x250-000000-80-0-0.jpg,13309062
-portugal,dark wave rock,pale,aenima,8.0,https://cdn-images.dzcdn.net/images/cover/8606263153a95df9830c52774a5b07d7/250x250-000000-80-0-0.jpg,65040530
+portugal,dark wave rock,pale,aenima,8.0,https://cdn-images.dzcdn.net/images/cover/45ce4c0886fbe8ff3a2bddd7d4f9b507/250x250-000000-80-0-0.jpg,678489722
 romania,indie rock,stem cell research,cardinal,7.5,https://cdn-images.dzcdn.net/images/cover/1cf950a241b348e1443d9eae5d33c69d/250x250-000000-80-0-0.jpg,1816308247
 romania,indie rock,black holes,vertical ego,7.5,https://cdn-images.dzcdn.net/images/cover/2ca1a53781d9825e5fa53cf4b90d7a2e/250x250-000000-80-0-0.jpg,2193782277
 russia,alt rock,untitled,franco,8.3,https://cdn-images.dzcdn.net/images/cover/f725df49b6ae9470bde8398688f9a6ce/250x250-000000-80-0-0.jpg,2766063
@@ -202,7 +202,7 @@ switzerland,alt rock,headed for the ocean,favez,8.8,,
 switzerland,alt rock,chasing honesty,favez,7.0,https://cdn-images.dzcdn.net/images/cover/b30aaa30d1da34782b500ed18cf66b55/250x250-000000-80-0-0.jpg,9932539
 taiwan,alt rock,爛泥,no party for cao dong,8.5,,
 thailand,pop/indie rock(?),get up,kiki,7.0,https://cdn-images.dzcdn.net/images/cover/b8501252a321f23f9cfe1a5c120e70cf/250x250-000000-80-0-0.jpg,2157466407
-thailand,indie rock,let me go,yonlapa,8.0,https://cdn-images.dzcdn.net/images/cover/0a7ee72d5359d2405c6f83d9b1f4ff79/250x250-000000-80-0-0.jpg,2812790202
+thailand,indie rock,let me go,yonlapa,8.0,https://cdn-images.dzcdn.net/images/cover/2a3a0e5e88a6f15cb9be106472ffa85b/250x250-000000-80-0-0.jpg,2812778442
 thailand,indie rock,i'm just like that,yonlapa,7.8,https://cdn-images.dzcdn.net/images/cover/19a94fdd9b175161db1dbe98b33d143b/250x250-000000-80-0-0.jpg,2700000602
 tunisia,shoegaze,sleep cycle,retrieval,7.0,https://cdn-images.dzcdn.net/images/cover/cf0fb2b1da52e9e442fd993ee256f4d4/250x250-000000-80-0-0.jpg,479139422
 tunisia,shoegaze,away,retrieval,7.0,https://cdn-images.dzcdn.net/images/cover/cf0fb2b1da52e9e442fd993ee256f4d4/250x250-000000-80-0-0.jpg,479139412
