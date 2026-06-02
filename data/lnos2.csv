@@ -1,6 +1,6 @@
 country,genre,song name,artist,rating,album_url,track_id
 angola,rock,saudade,instinto primario,7.5,https://cdn-images.dzcdn.net/images/cover/5a2fc93f29f714161827ce2466534b8b/250x250-000000-80-0-0.jpg,2130947457
-angola,metal,o ser,m'vula,,,
+angola,metal,o ser,m'vula,,https://cdn-images.dzcdn.net/images/cover/a102cc679ebf424bdb36bf6cbdba69b2/250x250-000000-80-0-0.jpg,70756780
 antarctica,indie rock,how many people,nunatuk,6.5,,
 argentina,indie rock,ratas,homogenica,7.0,https://cdn-images.dzcdn.net/images/cover/8a2531ad9ef62dff7d94a5970e235498/250x250-000000-80-0-0.jpg,2670586682
 argentina,indie rock,turista,homogenica,8.0,https://cdn-images.dzcdn.net/images/cover/8a2531ad9ef62dff7d94a5970e235498/250x250-000000-80-0-0.jpg,2670586652
@@ -56,7 +56,7 @@ china,alternative,光,arches,7.0,,
 china,shoegaze,i just want 2 hear your voice...,strawberry lust,7.0,https://cdn-images.dzcdn.net/images/cover/54285ed278079fc3f9ec36d98560a946/250x250-000000-80-0-0.jpg,3155660381
 colombia,emo,become,the hall effect,7.0,https://cdn-images.dzcdn.net/images/cover/ee9cdfc3b14ed0ff449dc36452af9344/250x250-000000-80-0-0.jpg,1714307417
 costa rica,shoegaze,cuarto rosa,sway,7.0,https://cdn-images.dzcdn.net/images/cover/d04fb2841f11324620fdacf822350d05/250x250-000000-80-0-0.jpg,427673392
-croatia,psychedelic rock,meke ruke,cuvarkuca,7.0,https://cdn-images.dzcdn.net/images/cover/b77bb5e3f16386fc2798ec1292d9ac7b/250x250-000000-80-0-0.jpg,1734730577
+croatia,psychedelic rock,meke ruke,cuvarkuca,7.0,https://cdn-images.dzcdn.net/images/cover/59c2196864f3e1daf56920281b97add6/250x250-000000-80-0-0.jpg,2030276547
 croatia,rock,bez tebe,detour,8.0,https://cdn-images.dzcdn.net/images/cover/9d53b91872b62fa6bbdd5d1cb02d3b48/250x250-000000-80-0-0.jpg,592461612
 czechia,experimental rock,sign n spell,here,7.0,https://cdn-images.dzcdn.net/images/cover/b82b7615d3eeb998417ffa12489d94b3/250x250-000000-80-0-0.jpg,61261440
 cuba,shoegaze,no te veo,land whales,8.7,https://cdn-images.dzcdn.net/images/cover/1e424e53d1b4f9e808a0ebba4ae7a1e7/250x250-000000-80-0-0.jpg,2097286837
@@ -93,7 +93,7 @@ india,indie rock,wknd frnds,the f16s,7.0,https://cdn-images.dzcdn.net/images/cov
 india,alt rock,the bridge between us,pacifist,6.5,https://cdn-images.dzcdn.net/images/cover/ead096e08167ef57581cc812491bcc34/250x250-000000-80-0-0.jpg,2419987285
 indonesia,indie rock,checks and calls,liar's wife,8.0,,
 indonesia,indie rock,confused,sunwich,7.0,https://cdn-images.dzcdn.net/images/cover/f980b3cbf240777faae7b08e828b4afe/250x250-000000-80-0-0.jpg,1599346612
-iran,alt rock,saghi,o-hum,7.5,https://cdn-images.dzcdn.net/images/cover/39f3c2213f9cade21d54849b2a1813ba/250x250-000000-80-0-0.jpg,3377630021
+iran,alt rock,saghi,o-hum,7.5,https://cdn-images.dzcdn.net/images/cover/3064be9331479f85ba33f1671ef98bae/250x250-000000-80-0-0.jpg,109988266
 ireland,alt rock,boys in the better land,fontaines d.c,8.0,https://cdn-images.dzcdn.net/images/cover/0aee87fc3b0751dc67a1a3cb402ad80a/250x250-000000-80-0-0.jpg,731723442
 ireland,alt rock,jackie down the line,fontaines d.c,10.0,https://cdn-images.dzcdn.net/images/cover/dbf4be70179ad4f9341741c207f1cc60/250x250-000000-80-0-0.jpg,3124676271
 italy,alt rock,come dovrei oppormi,bymyside,10.0,https://cdn-images.dzcdn.net/images/cover/b87cb7f8dbd60d7d272ca8068d03fe64/250x250-000000-80-0-0.jpg,1155853332
@@ -190,7 +190,7 @@ south korea,alternative,go back,se so neon,9.0,https://cdn-images.dzcdn.net/imag
 south korea,indie rock,there there,crystal tea,8.5,https://cdn-images.dzcdn.net/images/cover/36f5ba348cc822b74c0dee063368bb82/250x250-000000-80-0-0.jpg,876461932
 south korea,shoegaze,beautiful world,parannoul,9.8,https://cdn-images.dzcdn.net/images/cover/a47abbc73a5db7a2b3df94c5fc721c7b/250x250-000000-80-0-0.jpg,1345601152
 sri lanka,funk,sticky like glue,the soul,8.0,https://cdn-images.dzcdn.net/images/cover/4d2124097ebbbd051d2bd31fe7c32ccd/250x250-000000-80-0-0.jpg,920032372
-sweden,alt rock,om du var har,kent,10.0,https://cdn-images.dzcdn.net/images/cover/6ecf74293cd11f7bab8af2728a0d1a27/250x250-000000-80-0-0.jpg,7861124
+sweden,alt rock,om du var har,kent,10.0,https://cdn-images.dzcdn.net/images/cover/7270ae0d1e849f082a91091d37f96264/250x250-000000-80-0-0.jpg,132195400
 sweden,alt rock,waterproof,minute,8.5,https://cdn-images.dzcdn.net/images/cover/c43cbae29f63cd7259788bea10671a19/250x250-000000-80-0-0.jpg,1053567882
 sweden,alt rock,i wanna be your secret,minute,8.5,https://cdn-images.dzcdn.net/images/cover/681719f9842536ea2146365f38e73a6d/250x250-000000-80-0-0.jpg,1530400802
 sweden,noise rock,tärd,trachimbod,10.0,https://cdn-images.dzcdn.net/images/cover/9c1a94f2861a274bc7a294fb668288cf/250x250-000000-80-0-0.jpg,349653951
