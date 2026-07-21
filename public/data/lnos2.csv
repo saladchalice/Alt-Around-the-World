@@ -1,6 +1,6 @@
 country,genre,song name,artist,rating,album_url,track_id
 angola,rock,saudade,instinto primario,7.5,https://cdn-images.dzcdn.net/images/cover/5a2fc93f29f714161827ce2466534b8b/250x250-000000-80-0-0.jpg,2130947457
-angola,metal,o ser,m'vula,,,
+angola,metal,o ser,m'vula,,https://cdn-images.dzcdn.net/images/cover/a102cc679ebf424bdb36bf6cbdba69b2/250x250-000000-80-0-0.jpg,70756780
 antarctica,indie rock,how many people,nunatuk,6.5,,
 argentina,indie rock,ratas,homogenica,7.0,https://cdn-images.dzcdn.net/images/cover/265f2aa2e1e5215c0796abc97a5a8f81/250x250-000000-80-0-0.jpg,4008193971
 argentina,indie rock,turista,homogenica,8.0,https://cdn-images.dzcdn.net/images/cover/265f2aa2e1e5215c0796abc97a5a8f81/250x250-000000-80-0-0.jpg,4008193941
@@ -186,7 +186,7 @@ singapore,midwest emo,cabin fever,subsonic eye,8.8,https://cdn-images.dzcdn.net/
 singapore,midwest emo,dijangka,subsonic eye,9.0,https://cdn-images.dzcdn.net/images/cover/799b6ceb2df7f738d2ed2d2a20e3e945/250x250-000000-80-0-0.jpg,1493444492
 singapore,midwest emo,matahari,subsonic eye,8.0,https://cdn-images.dzcdn.net/images/cover/799b6ceb2df7f738d2ed2d2a20e3e945/250x250-000000-80-0-0.jpg,1493444502
 south africa,pop rock (?) ,cokehead,internet girl,9.5,https://cdn-images.dzcdn.net/images/cover/43aa779f0b6b2cfe47fe74e6adb21d03/250x250-000000-80-0-0.jpg,3234563431
-south korea,alternative,go back,se so neon,9.0,https://cdn-images.dzcdn.net/images/cover/70cbcd84e7803c9eafc803be99eefd40/250x250-000000-80-0-0.jpg,880652502
+south korea,alternative,go back,se so neon,9.0,https://cdn-images.dzcdn.net/images/cover/fd96d7095ae6f197bdf97449dfa2cbf3/250x250-000000-80-0-0.jpg,768026432
 south korea,indie rock,there there,crystal tea,8.5,https://cdn-images.dzcdn.net/images/cover/36f5ba348cc822b74c0dee063368bb82/250x250-000000-80-0-0.jpg,876461932
 south korea,shoegaze,beautiful world,parannoul,9.8,https://cdn-images.dzcdn.net/images/cover/a47abbc73a5db7a2b3df94c5fc721c7b/250x250-000000-80-0-0.jpg,1345601152
 sri lanka,funk,sticky like glue,the soul,8.0,https://cdn-images.dzcdn.net/images/cover/4d2124097ebbbd051d2bd31fe7c32ccd/250x250-000000-80-0-0.jpg,920032372
@@ -214,7 +214,7 @@ turkey,alt rock,cambaz,mor ve ötesi,8.7,https://cdn-images.dzcdn.net/images/cov
 ukraine,indie rock,Я кусаю щоки,the unsleeping,8.0,https://cdn-images.dzcdn.net/images/cover/5913adc272c95159d363b333155a634b/250x250-000000-80-0-0.jpg,3061726251
 ukraine,indie rock,Не Сплю,the unsleeping,7.8,https://cdn-images.dzcdn.net/images/cover/b0984fdde1e36cf2e393edc9b161db10/250x250-000000-80-0-0.jpg,2145613617
 united kingdom,rock,goleuadau llundain,daniel lloyd a mr pinc,8.0,https://cdn-images.dzcdn.net/images/cover/b6fc92c279cfa578fb931edb3396be0a/250x250-000000-80-0-0.jpg,9892328
-United States of America,alt rock,dumb,pretty sick,8.5,https://cdn-images.dzcdn.net/images/cover/d07ada2db981f8092ab0bc9815628dfb/250x250-000000-80-0-0.jpg,1288150852
+United States of America,alt rock,dumb,pretty sick,8.5,https://cdn-images.dzcdn.net/images/cover/a0546757db979e28c46205c4cbd040ef/250x250-000000-80-0-0.jpg,1064057742
 uruguay,rock,upside down,astroboy,7.5,https://cdn-images.dzcdn.net/images/cover/6ae8822a26b47a16196cff531a33eee7/250x250-000000-80-0-0.jpg,3713784052
 uruguay,rock,al vacio,no te va gustar,8.0,https://cdn-images.dzcdn.net/images/cover/0d14f6b96136cafd05bbcbf39553bc76/250x250-000000-80-0-0.jpg,11683775
 uzbekistan,indie rock,Нам не нужны друзья,wladek sheen,7.0,https://cdn-images.dzcdn.net/images/cover/ffb41c88408bbeee649bc01ed4eab0f9/250x250-000000-80-0-0.jpg,3759008912
