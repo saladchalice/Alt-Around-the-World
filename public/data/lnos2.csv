@@ -1,6 +1,6 @@
 country,genre,song name,artist,rating,album_url,track_id
 angola,rock,saudade,instinto primario,7.5,https://cdn-images.dzcdn.net/images/cover/5a2fc93f29f714161827ce2466534b8b/250x250-000000-80-0-0.jpg,2130947457
-angola,metal,o ser,m'vula,,,
+angola,metal,o ser,m'vula,,https://cdn-images.dzcdn.net/images/cover/a102cc679ebf424bdb36bf6cbdba69b2/250x250-000000-80-0-0.jpg,70756780
 antarctica,indie rock,how many people,nunatuk,6.5,,
 argentina,indie rock,ratas,homogenica,7.0,https://cdn-images.dzcdn.net/images/cover/265f2aa2e1e5215c0796abc97a5a8f81/250x250-000000-80-0-0.jpg,4008193971
 argentina,indie rock,turista,homogenica,8.0,https://cdn-images.dzcdn.net/images/cover/265f2aa2e1e5215c0796abc97a5a8f81/250x250-000000-80-0-0.jpg,4008193941
@@ -69,7 +69,7 @@ egypt,alt rock,segn bel alwan,"ramy essam, malikah",8.0,https://cdn-images.dzcdn
 el salvador,indie rock,color,inflorescencia,6.7,https://cdn-images.dzcdn.net/images/cover/2b77d92eaa26f93b2c2b2f6dc64331e5/250x250-000000-80-0-0.jpg,2666028002
 faroe islands,alt rock,indigo brow,clickhaze,10.0,https://cdn-images.dzcdn.net/images/cover/31cefc3cc06174bf0b056b43d88c12aa/250x250-000000-80-0-0.jpg,67882961
 finland,alt rock,006,apulanta,7.0,https://cdn-images.dzcdn.net/images/cover/6dea96491cdf36203b97c4c948c5c32d/250x250-000000-80-0-0.jpg,61857566
-finland,emo,join me in death,him,9.0,https://cdn-images.dzcdn.net/images/cover/a4fd7ef2e59c369f15b728fb170af259/250x250-000000-80-0-0.jpg,3785295692
+finland,emo,join me in death,him,9.0,https://cdn-images.dzcdn.net/images/cover/a4fd7ef2e59c369f15b728fb170af259/250x250-000000-80-0-0.jpg,3785295542
 france,indie rock,lasso,phoenix,7.0,https://cdn-images.dzcdn.net/images/cover/c3bb90a6b2f333c1510a876236bacf0c/250x250-000000-80-0-0.jpg,3026048771
 france,rock,reggie lewis,sport,6.0,https://cdn-images.dzcdn.net/images/cover/1f41ce0dbdf9fc24b51abcd67b696a30/250x250-000000-80-0-0.jpg,691290242
 france,indie rock,armistice,phoenix,8.0,https://cdn-images.dzcdn.net/images/cover/c3bb90a6b2f333c1510a876236bacf0c/250x250-000000-80-0-0.jpg,3026048811
@@ -83,7 +83,7 @@ germany,alternative,gegenstück,monochrome,8.8,https://cdn-images.dzcdn.net/imag
 germany,alternative,hands and arrows,sometree,8.5,https://cdn-images.dzcdn.net/images/cover/056942086d3ac772eee6ecec3adfaa53/250x250-000000-80-0-0.jpg,3971568
 ghana,rock,try,dark suburb,6.0,https://cdn-images.dzcdn.net/images/cover/8d0e27499dc1cd7991ae2852d56106a9/250x250-000000-80-0-0.jpg,1667735762
 greece,pop rock (?) ,the big deal,tripwire,7.0,https://cdn-images.dzcdn.net/images/cover/4bd29cfdb94a279713468397b5e7024a/250x250-000000-80-0-0.jpg,1842274667
-greenland,folk rock,inuinnaagavit,nanook,7.0,https://cdn-images.dzcdn.net/images/cover/e7618620ae59c53af6f01393550f3fb4/250x250-000000-80-0-0.jpg,858567942
+greenland,folk rock,inuinnaagavit,nanook,7.0,https://cdn-images.dzcdn.net/images/cover/e0293a4c9579a47aa2195c52559af170/250x250-000000-80-0-0.jpg,2789232652
 guam,noise rock,words cannot express,matala,7.0,https://cdn-images.dzcdn.net/images/cover/0ca1c6b7e1455181a0687eca6ef3f25e/250x250-000000-80-0-0.jpg,74172046
 guatemala,indie rock,guatemala esta muerta,volver,7.5,https://cdn-images.dzcdn.net/images/cover/6d01dbc9470355ba2e7c6e298d38266b/250x250-000000-80-0-0.jpg,77687534
 hungary,alt rock,ha az eletben,kispal es a borz,7.6,https://cdn-images.dzcdn.net/images/cover/ba5d1b0c478ea132faddc3b9c5e48f89/250x250-000000-80-0-0.jpg,76791380
@@ -115,8 +115,8 @@ kazakhstan,indie rock,sadness,secret radio,6.5,https://cdn-images.dzcdn.net/imag
 kazakhstan,indie rock,kokke,far in gate,6.7,https://cdn-images.dzcdn.net/images/cover/1c776ada3d6d9b2c489d45679d1bd4b3/250x250-000000-80-0-0.jpg,659795112
 kenya,indie rock,leopold,crystal axis,6.0,https://cdn-images.dzcdn.net/images/cover/53bee74acfeaadc56614f192b08d99c0/250x250-000000-80-0-0.jpg,553872662
 kenya,rock,nitachange,"rash band, ruff",5.0,https://cdn-images.dzcdn.net/images/cover/f8b9811c045c8be242874169d49272a8/250x250-000000-80-0-0.jpg,740010492
-kyrgyzstan,pop rock (?) ,Город-точка,Город 312,7.0,,
-latvia,experimental rock,pulkstens,mazi smirdigie kocini,7.0,,
+kyrgyzstan,pop rock (?) ,Город-точка,Город 312,7.0,https://cdn-images.dzcdn.net/images/cover/5ae726f7794c45f057e2853fb54e5af6/250x250-000000-80-0-0.jpg,1606934312
+latvia,experimental rock,pulkstens,mazi smirdigie kocini,7.0,https://cdn-images.dzcdn.net/images/cover/7635290d798a6d57abee94c821011215/250x250-000000-80-0-0.jpg,96320842
 latvia,alt rock,fabrikas meitenes dziesma,zidruns,5.0,https://cdn-images.dzcdn.net/images/cover/dda718ae370e4c088b8dc13638e6ce55/250x250-000000-80-0-0.jpg,942980212
 latvia,dream pop,i want you,tribes of the city,7.0,https://cdn-images.dzcdn.net/images/cover/8edd05b2a647a3c57370851909b3b08a/250x250-000000-80-0-0.jpg,779976572
 lebanon,shoegaze,feel better,bliss,7.0,https://cdn-images.dzcdn.net/images/cover/10dc427ba65cddc4857cf2669319f6e2/250x250-000000-80-0-0.jpg,3791958682
@@ -194,7 +194,7 @@ sweden,alt rock,om du var har,kent,10.0,https://cdn-images.dzcdn.net/images/cove
 sweden,alt rock,waterproof,minute,8.5,https://cdn-images.dzcdn.net/images/cover/c43cbae29f63cd7259788bea10671a19/250x250-000000-80-0-0.jpg,1053567882
 sweden,alt rock,i wanna be your secret,minute,8.5,https://cdn-images.dzcdn.net/images/cover/681719f9842536ea2146365f38e73a6d/250x250-000000-80-0-0.jpg,1530400802
 sweden,noise rock,tärd,trachimbod,10.0,https://cdn-images.dzcdn.net/images/cover/9c1a94f2861a274bc7a294fb668288cf/250x250-000000-80-0-0.jpg,349653951
-sweden,alt rock,things she said,kent,10.0,https://cdn-images.dzcdn.net/images/cover/6ecf74293cd11f7bab8af2728a0d1a27/250x250-000000-80-0-0.jpg,2324046
+sweden,alt rock,things she said,kent,10.0,https://cdn-images.dzcdn.net/images/cover/85a480550e69c1e72dd413e136cc4e6c/250x250-000000-80-0-0.jpg,15750209
 sweden,alt rock,if you were here,kent,10.0,https://cdn-images.dzcdn.net/images/cover/6ecf74293cd11f7bab8af2728a0d1a27/250x250-000000-80-0-0.jpg,2324092
 sweden,alternative,owc,kent,9.6,https://cdn-images.dzcdn.net/images/cover/6ecf74293cd11f7bab8af2728a0d1a27/250x250-000000-80-0-0.jpg,2324047
 switzerland,alt rock,new in colors,favez,9.0,,
@@ -214,7 +214,7 @@ turkey,alt rock,cambaz,mor ve ötesi,8.7,https://cdn-images.dzcdn.net/images/cov
 ukraine,indie rock,Я кусаю щоки,the unsleeping,8.0,https://cdn-images.dzcdn.net/images/cover/5913adc272c95159d363b333155a634b/250x250-000000-80-0-0.jpg,3061726251
 ukraine,indie rock,Не Сплю,the unsleeping,7.8,https://cdn-images.dzcdn.net/images/cover/b0984fdde1e36cf2e393edc9b161db10/250x250-000000-80-0-0.jpg,2145613617
 united kingdom,rock,goleuadau llundain,daniel lloyd a mr pinc,8.0,https://cdn-images.dzcdn.net/images/cover/b6fc92c279cfa578fb931edb3396be0a/250x250-000000-80-0-0.jpg,9892328
-United States of America,alt rock,dumb,pretty sick,8.5,https://cdn-images.dzcdn.net/images/cover/a0546757db979e28c46205c4cbd040ef/250x250-000000-80-0-0.jpg,1064057742
+United States of America,alt rock,dumb,pretty sick,8.5,https://cdn-images.dzcdn.net/images/cover/d07ada2db981f8092ab0bc9815628dfb/250x250-000000-80-0-0.jpg,1288150852
 uruguay,rock,upside down,astroboy,7.5,https://cdn-images.dzcdn.net/images/cover/45eeeb0df673952ac5605271f71c6cea/250x250-000000-80-0-0.jpg,1428680
 uruguay,rock,al vacio,no te va gustar,8.0,https://cdn-images.dzcdn.net/images/cover/0d14f6b96136cafd05bbcbf39553bc76/250x250-000000-80-0-0.jpg,11683775
 uzbekistan,indie rock,Нам не нужны друзья,wladek sheen,7.0,https://cdn-images.dzcdn.net/images/cover/ffb41c88408bbeee649bc01ed4eab0f9/250x250-000000-80-0-0.jpg,3759008912
